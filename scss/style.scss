@@ -1,12 +1,49 @@
 @use 'partials/vars';
+@use 'partials/header';
 @use 'partials/mixins';
+@use 'partials/footer';
 
 @font-face {
 }
 
-:root {
-  --move-content: 0;
-}
 * {
   box-sizing: border-box;
+}
+
+body {
+  color: vars.$base-color;
+  background: vars.$bg-color;
+  font: 100% vars.$font-stack;
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+img,
+video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  // color: vars.$green-color;
+}
+
+h2 {
+  font: 100% vars.$roboto-slab-font-stack;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: normal;
 }
