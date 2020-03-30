@@ -1,0 +1,12 @@
+@use 'partials/vars';
+@use 'partials/mixins';
+
+@font-face {
+}
+
+:root {
+  --move-content: 0;
+}
+* {
+  box-sizing: border-box;
+}

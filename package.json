@@ -1,0 +1,26 @@
+{
+  "name": "personalportfolio",
+  "version": "1.0.0",
+  "description": "personal portfolio",
+  "main": "main.js",
+  "dependencies": {
+    "parcel-plugin-static-files-copy": "^2.3.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "scripts": {
+    "start": "parcel *.html --open",
+    "build": "parcel build *.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/math06j6/personal_portfolio.git"
+  },
+  "author": "M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/math06j6/personal_portfolio/issues"
+  },
+  "homepage": "https://github.com/math06j6/personal_portfolio#readme"
+}
