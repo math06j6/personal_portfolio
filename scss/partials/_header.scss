@@ -5,24 +5,12 @@
   top: 0;
   width: 100%;
   background: transparent;
-  background: #f1bda5;
-  color: white;
+  background: #f6f5f5;
+  color: vars.$one-color;
   font-size: 1.6rem;
   transition: 0.5s all ease;
-  z-index: 5;
   padding: 0.75rem 1rem;
-}
-
-#navigation {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: transparent;
-  font-size: 1.6rem;
-  /*    height: 60px;*/
-  transition: 0.5s all ease;
-  z-index: 5;
-  color: white;
+  position: sticky;
 }
 
 .topnav {
@@ -31,6 +19,15 @@
   justify-content: center;
   flex-wrap: nowrap;
   flex-direction: column;
+  overflow: hidden;
+  max-width: 1400px;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  transition: 0.5s all ease;
+  z-index: 5;
+  background: transparent;
+  color: vars.$one-color;
 }
 
 .menu-top {
@@ -67,6 +64,7 @@ a.hjem:hover {
 /* Animationen af menuen er inspireret af W3schools: How TO - Menu Icon. Link: https://www.w3schools.com/howto/howto_css_menu_icon.asp */
 .topnav .menuknap {
   cursor: pointer;
+  background-color: transparent;
   color: vars.$one-color;
   padding: 0.5rem 0;
 }
@@ -75,7 +73,7 @@ a.hjem:hover {
 .bar2 {
   width: 34px;
   height: 5px;
-  color: vars.$one-color;
+  background-color: vars.$one-color;
   /*    margin: 4px 0;*/
   transition: 0.4s;
   border-radius: 40%;
@@ -215,14 +213,14 @@ a.hjem:hover {
 
 #navigation.change-header {
   background: var(--colorSix);
-  color: var(--baseColor);
+  color: vars.$one-color;
 
   mix-blend-mode: initial;
 }
 
 #navigation.change-header .bar1,
 #navigation.change-header .bar2 {
-  background-color: var(--baseColor);
+  background-color: vars.$one-color;
 }
 
 @media screen and (max-width: 800px) {
@@ -301,7 +299,7 @@ a.hjem:hover {
   // #navigation.change-header.responsive .responsive .dropbtn,
   #navigation.change-header.responsive .dropbtn {
     // background-color: var(--colorOne);
-    // color: white;
+    color: vars.$one-color;
   }
 
   // .dropdown:hover .dropbtn {

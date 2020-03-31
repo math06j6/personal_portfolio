@@ -33,11 +33,11 @@ function init() {
 
 function startObserver() {
   // The Intersection Observer
-  // Inspiration from MDN and the article "Beautiful Scrolling Experiences – Without Libraries"
+  // Inspiration from MDN and the section "Beautiful Scrolling Experiences – Without Libraries"
   // Link: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
   // Link: https://24ways.org/2019/beautiful-scrolling-experiences-without-libraries/
 
-  const articles = document.querySelectorAll("article");
+  const sections = document.querySelectorAll("section");
 
   let options = {
     rootMargin: "0px",
@@ -58,8 +58,8 @@ function startObserver() {
 
   const observer = new IntersectionObserver(callback, options);
 
-  articles.forEach((article, index) => {
-    observer.observe(article);
+  sections.forEach((section, index) => {
+    observer.observe(section);
   });
 }
 
