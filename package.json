@@ -12,7 +12,9 @@
   },
   "scripts": {
     "start": "parcel *.html --open",
-    "build": "parcel build *.html --public-url ./"
+    "clean": "rm -rf dist/*",
+    "build:parcel": "parcel build *.html --public-url ./",
+    "build": "npm run clean && npm run build:parcel"
   },
   "repository": {
     "type": "git",
