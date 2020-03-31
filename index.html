@@ -19,7 +19,7 @@
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <header class="site_header">
+    <header class="site-header">
       <!-- <nav id="myTopnav" class="topnav">
         <div class="home">
           <a href="index.html" class="hjem">Mathias Licht</a>
@@ -43,18 +43,109 @@
           <a href="about.html" class="menubtn">Om</a>
         </div>
       </nav> -->
+
+      <nav id="navigation" class="topnav change-header">
+        <div class="menu-top">
+          <div class="home">
+            <a href="index.html" class="hjem">Mathias Licht</a>
+            <button class="menuknap" title="menuknap" aria-label="menuknap">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+            </button>
+          </div>
+          <div class="menu-wrapper">
+            <ul class="menu-list">
+              <li>
+                <a href="" class="menubtn underline">About</a>
+              </li>
+              <li>
+                <a href="" class="menubtn underline">Projects</a>
+              </li>
+              <li>
+                <a href="" class="menubtn underline">Contact </a>
+              </li>
+              <!-- <li class="dropdown">
+              <button class="dropbtn">Dropdown</button>
+              <ul class="dropdown-content">
+                <li><a href="" class="menubtn underline">About</a></li>
+                <li><a href="" class="menubtn underline">Projects</a></li>
+                <li><a href="" class="menubtn underline">Contact</a></li>
+              </ul>
+            </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
       <div class="the_container">
-        <article id="one">
-          <h1>Test</h1>
-        </article>
+        <article id="one"></article>
         <article id="two"></article>
         <article id="three"></article>
         <article id="four"></article>
       </div>
     </main>
-    <footer></footer>
+    <footer id="myFooter" class="">
+      <div class="footer-wrapper">
+        <div class="footer-menu">
+          <ul>
+            <li>Company</li>
+            <li>
+              <a href="#about" class="underline">About</a>
+            </li>
+            <li>
+              <a href="#contact" class="underline">Contact</a>
+            </li>
+            <li>
+              <a href="projects" class="underline">Projects</a>
+            </li>
+            <!-- <li>
+              <a href="" class="underline"></a>
+            </li>
+            <li>
+              <a href="" class="underline"></a>
+            </li> -->
+          </ul>
+        </div>
+        <!-- <div class="footer-menu">
+          <form action="mail.php" method="post" id="newsletter">
+            <fieldset>
+              <legend>Newsletter sign-up</legend>
+              <div class="newsletter-container">
+                <div class="form-row">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" aria-label="email" required="" />
+                </div>
+                <button class="newsletter-btn" type="submit" value="Subscribe" form="newsletter" title="newsletter" aria-label="newsletter">
+                  <i class="right"></i>
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div> -->
+        <div class="footer-menu">
+          <ul class="social-icons">
+            <li class="social-item">
+              <a href="" target="_blank" rel="noreferrer" title="linkedin" class="linkedin" aria-label="linkedin"></a>
+            </li>
+            <li class="social-item">
+              <a href="" target="_blank" rel="noreferrer" title="codepen" class="codepen" aria-label="codepen"></a>
+            </li>
+            <li class="social-item">
+              <a href="https://github.com/math06j6/personal_portfolio" target="_blank" rel="noreferrer" title="github" class="github" aria-label="Github"></a>
+            </li>
+          </ul>
+        </div>
+        <address>
+          <ul>
+            <li><a href="mailto:" class="underline">myemail@.com</a></li>
+          </ul>
+        </address>
+        <div class="copyright">
+          <p>© <span id="aarstal">2020 </span>Mathias Licht</p>
+        </div>
+      </div>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>
