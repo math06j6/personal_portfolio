@@ -8,7 +8,7 @@ const date = new Date();
 
 function init() {
   console.log("init");
-  HTML.container = document.querySelector(".the_container");
+  HTML.container = document.querySelector(".home-wrapper");
 
   // document.querySelector("#scrollbar").style.setProperty("--position", position);
   // scrolling();
