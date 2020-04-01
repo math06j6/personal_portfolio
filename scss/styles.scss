@@ -44,7 +44,7 @@ button {
 
 main {
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   z-index: 1;
   overflow-x: hidden;
@@ -53,13 +53,13 @@ main {
 
 .home-wrapper {
   /* height: calc(100vh - 18px); */
-  // height: 100vh;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   /* overflow: scroll; */
   /* scroll-behavior: smooth; */
   overflow-y: auto;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   perspective: 2px;
   width: 100vw;
   padding: 1rem;
@@ -67,17 +67,18 @@ main {
 
 section {
   height: 100vh;
-  /* min-height: 100vh; */
   scroll-snap-align: center;
-  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  // scroll-snap-align: start;
   // width: 100%;
   // position: sticky;
   // top: 0;
   // width: 100vw;
 
-  // &:nth-last-child(1) {
-  //   height: 100vh;
-  // }
+  &:nth-last-child(1) {
+    // height: 100vh;
+    scroll-margin-bottom: 350px;
+  }
 
   .section-header {
     margin: 0 auto;
