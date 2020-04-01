@@ -46,6 +46,9 @@ a.hjem {
   text-decoration: none;
   margin: auto 0;
   white-space: nowrap;
+  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" -15, "ital" 1;
+  // padding: 0.5rem 1rem;
+  // margin: auto 0;
 }
 
 a.hjem:hover {

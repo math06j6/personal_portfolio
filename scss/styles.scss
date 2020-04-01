@@ -6,8 +6,12 @@
 
 @use 'partials/typography';
 
-// @font-face {
-// }
+@font-face {
+  font-family: "Recursive";
+  font-weight: 300 1000;
+  font-style: oblique 0deg 15deg;
+  src: url("/static/fonts/Recursive_VF_1.043--subset-GF_latin_basic.woff2") format("woff2-variations");
+}
 
 // :root {
 //   --scrollRatio: 0;
@@ -17,7 +21,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 body {
@@ -27,26 +31,6 @@ body {
   overflow-wrap: break-word;
   hyphens: auto;
   margin: 0;
-}
-
-// section {
-//   max-width: 1400px;
-//   margin: 0 auto;
-//   padding: 1rem;
-// }
-
-h1 {
-  font-size: 2.5rem;
-  // color: vars.$green-color;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.8rem;
-  font-weight: normal;
 }
 
 button {
@@ -60,38 +44,43 @@ button {
 
 main {
   display: grid;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
-  // z-index: 1;
+  z-index: 1;
   overflow-x: hidden;
-  width: 100vw;
+  // width: 100vw;
 }
 
 .the_container {
   /* height: calc(100vh - 18px); */
   // height: 100vh;
-  max-height: 100vh;
+  height: 100vh;
   /* overflow: scroll; */
   /* scroll-behavior: smooth; */
-  overflow-y: scroll;
   overflow-y: auto;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
-
-  // perspective: 2px;
-  // width: 100vw;
+  perspective: 2px;
+  width: 100vw;
 }
+
 section {
   height: 100vh;
   /* min-height: 100vh; */
   scroll-snap-align: center;
   scroll-snap-align: start;
-  height: 100vh;
-  width: 100%;
+  // width: 100%;
   // position: sticky;
-  top: 0;
-  width: 100vw;
+  // top: 0;
+  // width: 100vw;
 
   // &:nth-last-child(1) {
   //   height: 100vh;
   // }
+
+  .section-header {
+    margin: 0 auto;
+    padding: 6rem 1rem 1rem;
+    max-width: 1400px;
+  }
 }
