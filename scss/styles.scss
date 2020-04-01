@@ -3,7 +3,7 @@
 @use 'partials/mixins';
 @use 'partials/header';
 @use 'partials/footer';
-
+@use 'partials/animation';
 @use 'partials/typography';
 
 @font-face {
@@ -75,10 +75,10 @@ section {
   // top: 0;
   // width: 100vw;
 
-  &:nth-last-child(1) {
-    // height: 100vh;
-    scroll-margin-bottom: 350px;
-  }
+  // &:nth-last-child(1) {
+  //   // height: 100vh;
+  //   scroll-margin-bottom: 350px;
+  // }
 
   .section-header {
     margin: 0 auto;

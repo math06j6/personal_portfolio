@@ -1,4 +1,5 @@
 @use 'partials/vars';
+@use 'partials/animation';
 
 footer {
   background-color: vars.$one-color;
@@ -58,7 +59,7 @@ address a {
 
 footer li,
 footer li a {
-  color: var(--one-color);
+  // color: var(--one-color);
   font-size: 1rem;
   line-height: 2;
 }
@@ -79,15 +80,13 @@ footer span.navn {
   text-transform: uppercase;
 }
 
-footer .find a,
-footer .footer-menu ul li:first-child,
-footer .footer-menu ul li:first-child a,
-footer .lokalitet :first-child {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: inherit;
-  text-transform: uppercase;
-}
+// footer .footer-menu ul li:first-child,
+// footer .footer-menu ul li:first-child a{
+//   font-size: 1rem;
+//   line-height: 1.6;
+//   color: inherit;
+//   text-transform: uppercase;
+// }
 
 .contact {
   font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" -15, "ital" 1;
@@ -108,9 +107,8 @@ footer .lokalitet :first-child {
 }
 
 .social-item {
-  /*            width: 1.75rem;*/
   cursor: pointer;
-  margin-inline-end: 1rem;
+  margin-inline-end: 1.5rem;
   max-height: 46px;
   transition: transform 0.2s ease-out 0s;
   transition: 200ms, transform 200ms;
@@ -122,52 +120,20 @@ footer .lokalitet :first-child {
 }
 
 .social-item a {
-  display: inline-block;
-  padding: 10px;
+  display: block;
   width: 30px;
   height: 100%;
-  margin: auto 0;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: invert(100%) sepia(0%) saturate(7497%) hue-rotate(332deg) brightness(101%) contrast(101%);
   max-height: 2rem;
   /*   */
 }
 
 .social-item:hover a,
 .social-item:focus a {
-  filter: invert(33%) sepia(100%) saturate(1363%) hue-rotate(239deg) brightness(100%) contrast(103%);
-  transform: scale(1.3);
+  color: vars.$two-color;
+  transition-timing-function: cubic-bezier(0.08, 0.73, 0.83, 0.67);
+  animation: color_change 5s ease forwards infinite;
+  transform: scale(1.2);
   transform-box: fill-box;
-}
-
-// Color
-// .wdc-animate-color {
-//   transition: background-color 0.2s ease-out 0s;
-// }
-
-// .wdc-animate-color.wdc-animate {
-//   background-color: $wdc-color-blueberry-600;
-// }
-
-// a.instagram {
-//     background-image: url(files/svg_icons/instagram.svg);
-// }
-
-// a.facebook {
-//   background-image: url(files/svg_icons/facebook.svg);
-// }
-a.codepen {
-  background-image: url(/static/svg_icons/codepen.svg);
-}
-
-a.linkedin {
-  background-image: url(/static/svg_icons/linkedin.svg);
-}
-
-a.github {
-  background-image: url(/static/svg_icons/github.svg);
 }
 
 .copyright {
