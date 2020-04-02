@@ -41,11 +41,7 @@ address {
   flex-wrap: nowrap;
   font-style: normal;
   padding: 0;
-  padding: 1rem 0 0;
-}
-
-address ul {
-  padding-bottom: 1rem;
+  padding: 0px 0px 1px;
 }
 
 address a {
@@ -108,7 +104,7 @@ footer span.navn {
 
 .social-item {
   cursor: pointer;
-  margin-inline-end: 1.5rem;
+  margin-inline-end: 2rem;
   max-height: 46px;
   transition: transform 0.2s ease-out 0s;
   transition: 200ms, transform 200ms;
@@ -144,6 +140,7 @@ footer span.navn {
 .copyright p {
   //   color: white;
   padding: 0rem;
+  font-size: 0.8rem;
 }
 
 /*Hover animation #Portfolio*/

@@ -86,3 +86,37 @@ section {
     max-width: 1400px;
   }
 }
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+
+  h1 {
+    padding-bottom: 20vh;
+  }
+
+  // .arrow {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+
+  .arrow a {
+    text-decoration: none;
+    font-family: "recursive-subset", "Recursive", sans-serif;
+    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "ital" 1;
+    // font-variation-settings: "PROP" 0, "XPRN" 1, "wght" 700, "slnt" 0, "ital" 0;
+    padding-bottom: 5rem;
+    font-size: calc(2rem + 1vw);
+    padding-bottom: 10vh;
+  }
+
+  .arrow a:hover {
+    color: #9059ff;
+    transition-timing-function: cubic-bezier(0.08, 0.73, 0.83, 0.67);
+    animation: color_change 10s ease forwards infinite;
+  }
+}
