@@ -111,10 +111,6 @@ footer span.navn {
   transform-box: fill-box;
 }
 
-.social-item:not(:last-child) {
-  // margin-right: 0.75rem;
-}
-
 .social-item a {
   display: block;
   width: 30px;
@@ -150,9 +146,9 @@ footer span.navn {
   text-decoration: none;
 }
 
-.footer-menu li > a.underline:hover {
-  // color: var(vars.$one-color);
-}
+// .footer-menu li > a.underline:hover {
+//   color: var(vars.$one-color);
+// }
 
 .footer-menu li > a.underline:before {
   content: "";
