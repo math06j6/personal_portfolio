@@ -15,3 +15,39 @@
     color: #ff2a8a;
   }
 }
+
+.content > * {
+  opacity: 0;
+  animation-delay: 800ms;
+  transform: translate3d(0, 5rem, 0);
+  transition: opacity 800ms, transform 800ms cubic-bezier(0.13, 0.07, 0.26, 0.99);
+}
+
+.is-visible .content > * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.fadein {
+  animation: fadeIn 2.5s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -62,13 +62,13 @@ main {
   scroll-snap-type: y proximity;
   perspective: 2px;
   width: 100vw;
-  padding: 1rem;
 }
 
 section {
   height: 100vh;
   scroll-snap-align: center;
   scroll-snap-stop: always;
+  padding: 1rem;
   // scroll-snap-align: start;
   // width: 100%;
   // position: sticky;
@@ -82,7 +82,7 @@ section {
 
   .section-header {
     margin: 0 auto;
-    padding: 6rem 0 1rem;
+    padding: 6rem 1rem 1rem;
     max-width: 1400px;
   }
 }
@@ -120,3 +120,107 @@ section {
     animation: color_change 10s ease forwards infinite;
   }
 }
+
+/*------------ Projects ------------*/
+
+#projects {
+  padding: 1rem 0;
+}
+
+#section_2 h2 {
+  color: var(--baseColor);
+}
+
+.full {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--colorSix);
+}
+
+.grid-container {
+  display: grid;
+  min-height: 20vh;
+  place-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.carousel-wrapper {
+  /* margin-left: 1rem; */
+  margin: 0 auto;
+}
+
+.carousel {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1rem;
+  white-space: nowrap;
+  padding: 10vh 0;
+  width: auto;
+
+  /*  webkit-overflow-scrolling:for safari */
+  -webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: touch;
+
+  /*
+  - Scrollbar-width:
+  - Removes Scrollbar. Only for Firefox
+  - Link: https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width
+  */
+
+  scrollbar-width: none;
+}
+
+.carousel:before,
+.carousel:after {
+  content: "";
+}
+
+.carousel::-webkit-scrollbar {
+  width: 0;
+}
+
+.product-card {
+  text-align: center;
+  background: var(--whiteColor);
+  padding: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-row-gap: 1rem;
+  position: relative;
+  box-shadow: none;
+  transition: transform 300ms ease-in-out, box-shadow 400ms ease, background 100ms ease;
+}
+
+.is-visible .product-card:hover,
+.is-visible .product-card:focus-within {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.5rem);
+  cursor: pointer;
+}
+
+.carousel .product-card {
+  width: 250px;
+}
+
+.koga-logo,
+.carousel .billede_side {
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: 350px;
+}
+
+.product-name {
+  text-transform: capitalize;
+  padding: 0 0 1rem;
+}
+
+/*-----------------------------------*/
