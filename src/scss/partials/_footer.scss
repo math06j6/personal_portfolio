@@ -119,8 +119,8 @@ footer span.navn {
   /*   */
 }
 
-.social-item:hover a,
-.social-item:focus a {
+.social-item:hover a svg,
+.social-item:focus a svg {
   color: vars.$two-color;
   transition-timing-function: cubic-bezier(0.08, 0.73, 0.83, 0.67);
   animation: color_change 5s ease forwards infinite;

@@ -1,11 +1,19 @@
+$color-default-bg: #f6f5f5;
 $base-color: #32325d;
 $one-color: #32325d;
 $two-color: #9059ff;
-$bg-color: #f6f5f5;
+
 // $green-color: #004153;
 // $grey-color: #666666;
 $white-color: #ffffff;
 
+$default-icon: #32325d;
+$night-bg-color: #202020;
+$night-color: #ffffff;
+$night-icon: #b9c6d3;
+$transition-one: 500ms;
+$transition-two: 250ms;
+$icon-transition: opacity $transition-one ease, transform $transition-one cubic-bezier(1, 0, 0.55, 0.85);
 // Typography
 $font-stack: "recursive-subset", "Recursive", sans-serif;
 

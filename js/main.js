@@ -18,6 +18,19 @@ function init() {
   document.querySelector(".menuknap").addEventListener("click", menuFunction);
 }
 
+const darkMode = document.querySelector(".dark-mode");
+
+darkMode.removeAttribute("hidden");
+
+darkMode.querySelector("input").addEventListener("change", (evt) => {
+  if (evt.target.checked) {
+    document.body.classList.add("dark");
+    return;
+  }
+
+  document.body.classList.remove("dark");
+});
+
 // function getRatio() {
 //   HTML.container.addEventListener("scroll", scrolling);
 // }
@@ -41,14 +54,14 @@ function startObserver() {
 
   let options = {
     rootMargin: "0px",
-    threshold: 0.75
+    threshold: 0.55,
   };
 
   const callback = (entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       const { target } = entry;
 
-      if (entry.intersectionRatio >= 0.75) {
+      if (entry.intersectionRatio >= 0.55) {
         target.classList.add("is-visible");
       } else {
         target.classList.remove("is-visible");

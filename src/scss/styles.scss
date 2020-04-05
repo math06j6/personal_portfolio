@@ -26,7 +26,7 @@
 
 body {
   color: vars.$base-color;
-  background: vars.$bg-color;
+  background: vars.$color-default-bg;
   font: 100% vars.$font-stack;
   overflow-wrap: break-word;
   hyphens: auto;
@@ -64,6 +64,12 @@ main {
   width: 100vw;
 }
 
+.wrapper {
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 section {
   height: 100vh;
   scroll-snap-align: center;
@@ -91,32 +97,68 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
+  padding: 2rem 1rem;
+  height: calc(100vh - 60px);
+  width: 100%;
+  background: lightblue;
 
   h1 {
-    padding-bottom: 20vh;
+    margin-top: auto;
+    margin-bottom: auto;
   }
-
-  // .arrow {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
 
   .arrow a {
     text-decoration: none;
     font-family: "recursive-subset", "Recursive", sans-serif;
     font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "ital" 1;
     // font-variation-settings: "PROP" 0, "XPRN" 1, "wght" 700, "slnt" 0, "ital" 0;
-    padding-bottom: 5rem;
+    padding-bottom: 5vh;
     font-size: calc(2rem + 1vw);
-    padding-bottom: 10vh;
   }
 
   .arrow a:hover {
     color: #9059ff;
     transition-timing-function: cubic-bezier(0.08, 0.73, 0.83, 0.67);
     animation: color_change 10s ease forwards infinite;
+  }
+}
+
+.reveal {
+  -webkit-animation: reveal 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: reveal 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  opacity: 0;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+@keyframes reveal {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    opacity: 1;
   }
 }
 
@@ -234,3 +276,40 @@ section {
 //     padding: 1rem;
 //   }
 // }
+
+.skills {
+  // padding: 1rem;
+  ul {
+    list-style: initial;
+    margin: 0.25rem 2rem;
+  }
+  li {
+    list-style: initial;
+    line-height: 1.6;
+  }
+}
+
+.dmst-bg,
+.koga-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+
+  .dmst-logo,
+  .koga-white {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    max-width: 150px;
+    fill: white;
+  }
+}
+
+.koga-bg {
+  background: #0e7dc7;
+}
+
+.dmst-bg {
+  background: #d95e00;
+}
