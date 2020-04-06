@@ -98,7 +98,7 @@ section {
   justify-content: center;
   flex-direction: column;
   padding: 2rem 1rem;
-  height: calc(100vh - 60px);
+  height: 100vh;
   width: 100%;
   background: lightblue;
 
@@ -237,6 +237,7 @@ section {
   position: relative;
   box-shadow: none;
   transition: transform 300ms ease-in-out, box-shadow 400ms ease, background 100ms ease;
+  width: 250px;
 }
 
 .is-visible .project-card:hover,
@@ -244,10 +245,6 @@ section {
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   transform: translateY(-0.5rem);
   cursor: pointer;
-}
-
-.carousel .project-card {
-  width: 250px;
 }
 
 .koga-logo,
@@ -259,23 +256,8 @@ section {
 }
 
 .product-name {
-  text-transform: capitalize;
   padding: 0 0 1rem;
 }
-
-/*-----------------------------------*/
-
-// @media only screen and (min-width: 400px) {
-//   .carousel:before,
-//   .carousel:after {
-//     content: "";
-//   }
-
-//   .carousel:after {
-//     content: "";
-//     padding: 1rem;
-//   }
-// }
 
 .skills {
   // padding: 1rem;
@@ -289,6 +271,10 @@ section {
   }
 }
 
+/*-----------------------------------*/
+// Projects
+
+.soon,
 .dmst-bg,
 .koga-bg {
   display: flex;
@@ -306,10 +292,51 @@ section {
   }
 }
 
+.soon {
+  white-space: normal;
+  background: vars.$base-color;
+  color: vars.$color-default-bg;
+  padding: 1rem;
+  hyphens: manual;
+
+  p {
+    transform: translateY(calc(100% - 4.5rem));
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform 700ms cubic-bezier(0.19, 1, 0.22, 1), opacity 700ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+
+.soon:hover {
+  // background: vars.$base-color;
+  // color: vars.$color-default-bg;
+
+  p {
+    transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(700ms / 8);
+  }
+}
+
 .koga-bg {
   background: #0e7dc7;
 }
 
 .dmst-bg {
   background: #d95e00;
+}
+
+.preloader {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  // transition: opacity 3s linear;
+  background: vars.$base-color;
+  pointer-events: none;
+  opacity: 1;
+  transition: 1.2s cubic-bezier(0.53, 0.04, 0.31, 0.88);
 }

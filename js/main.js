@@ -13,23 +13,59 @@ function init() {
   // document.querySelector("#scrollbar").style.setProperty("--position", position);
   // scrolling();
   // getRatio();
+  preLoad();
   startObserver();
+  darkMode();
   visAarstal();
   document.querySelector(".menuknap").addEventListener("click", menuFunction);
 }
 
-const darkMode = document.querySelector(".dark-mode");
+function preLoad() {
+  console.log("preLoad");
+  const preloader = document.querySelector(".preloader");
 
-darkMode.removeAttribute("hidden");
+  animate({
+    duration: 200,
+    timing: function (timeFraction) {
+      return timeFraction;
+    },
+    draw: function (progress) {
+      preloader.style.left = 100 * progress + "%";
+    },
+  });
+}
 
-darkMode.querySelector("input").addEventListener("change", (evt) => {
-  if (evt.target.checked) {
-    document.body.classList.add("dark");
-    return;
-  }
+function animate({ duration, draw, timing }) {
+  let start = performance.now();
 
-  document.body.classList.remove("dark");
-});
+  requestAnimationFrame(function animate(time) {
+    let timeFraction = (time - start) / duration;
+    if (timeFraction > 1) timeFraction = 1;
+
+    let progress = timing(timeFraction);
+
+    draw(progress);
+
+    if (timeFraction < 1) {
+      requestAnimationFrame(animate);
+    }
+  });
+}
+
+function darkMode() {
+  const darkMode = document.querySelector(".dark-mode");
+
+  darkMode.removeAttribute("hidden");
+
+  darkMode.querySelector("input").addEventListener("change", (evt) => {
+    if (evt.target.checked) {
+      document.body.classList.add("dark");
+      return;
+    }
+
+    document.body.classList.remove("dark");
+  });
+}
 
 // function getRatio() {
 //   HTML.container.addEventListener("scroll", scrolling);
@@ -78,6 +114,7 @@ function startObserver() {
 
 // Menu
 function menuFunction() {
+  console.log("menuFunction");
   /* Ved klik tilføjes eller fjernes "responsive" class på topnav */
   console.log("menuFunction");
   let x = document.querySelector("#navigation");

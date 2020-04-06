@@ -10,9 +10,9 @@
   color: vars.$one-color;
   font-size: 1.6rem;
   transition: 0.5s all ease;
-  padding: 0.75rem 1rem;
   z-index: 5;
   position: sticky;
+  padding: 0;
 }
 
 .topnav {
@@ -22,7 +22,7 @@
   flex-wrap: nowrap;
   flex-direction: column;
   overflow: hidden;
-  max-width: 1400px;
+  // max-width: 1400px;
   padding: 0;
   margin: 0 auto;
   font-size: 1.6rem;
@@ -37,7 +37,7 @@
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-between;
-  /*    max-width: 1400px;*/
+  max-width: 1400px;
   width: 100%;
   margin: auto;
 }
@@ -47,7 +47,7 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding: 0.5rem 1rem;
 }
 
 .left {
@@ -69,6 +69,7 @@ body.dark {
   /* text-transform: uppercase; */
   position: relative;
   cursor: pointer;
+  padding-right: 0.25rem;
 }
 
 .dark-mode:not([hidden]) {
@@ -135,12 +136,22 @@ body.dark {
  * Burger-menu
  */
 
-/* Animationen af menuen er inspireret af W3schools: How TO - Menu Icon. Link: https://www.w3schools.com/howto/howto_css_menu_icon.asp */
+#navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  font-size: 1.6rem;
+  transition: 0.5s all ease;
+  // z-index: 5;
+}
+
 .topnav .menuknap {
   cursor: pointer;
   background-color: transparent;
   color: vars.$one-color;
   padding: 0.5rem 0;
+  border: none;
 }
 
 .bar1,
@@ -172,6 +183,7 @@ body.dark {
 .menu-wrapper {
   width: 100%;
   margin: auto;
+  padding: 0 1rem;
 }
 
 .menu-wrapper .menu-list {
@@ -223,6 +235,7 @@ a.hjem {
   height: 100%;
 }
 
+.theme-icon:hover,
 a.hjem:hover,
 .menu-wrapper li a:hover {
   color: vars.$two-color;
@@ -335,7 +348,7 @@ a.hjem:hover {
   /* Der tilfÃ¸jes en class ("responsive") til topnav vha. JavaScript, nÃ¥r der klikkes pÃ¥ menuknappen. */
   #navigation.topnav.responsive {
     position: relative;
-    background-color: var(--baseColor);
+    background: vars.$color-default-bg;
     color: vars.$one-color;
     position: fixed;
     top: 0;

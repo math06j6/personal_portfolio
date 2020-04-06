@@ -7,10 +7,13 @@ $two-color: #9059ff;
 // $grey-color: #666666;
 $white-color: #ffffff;
 
-$default-icon: #32325d;
+$default-icon: currentColor;
 $night-bg-color: #202020;
 $night-color: #ffffff;
-$night-icon: #b9c6d3;
+$night-color-two: #c0c0c0;
+$night-color-three: rgba(144, 144, 144, 0.1);
+
+$night-icon: currentColor;
 $transition-one: 500ms;
 $transition-two: 250ms;
 $icon-transition: opacity $transition-one ease, transform $transition-one cubic-bezier(1, 0, 0.55, 0.85);
