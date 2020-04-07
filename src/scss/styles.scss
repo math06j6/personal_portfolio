@@ -223,6 +223,8 @@ section {
   width: 0;
 }
 
+// Project Cards
+
 .card-shadow {
   padding: 0.5rem;
 }
@@ -240,8 +242,8 @@ section {
   width: 250px;
 }
 
-.is-visible .project-card:hover,
-.is-visible .project-card:focus-within {
+.project-card:hover,
+.project-card:focus-within {
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   transform: translateY(-0.5rem);
   cursor: pointer;
@@ -255,32 +257,19 @@ section {
   height: 350px;
 }
 
-.product-name {
+.project-name {
   padding: 0 0 1rem;
+  font-size: 0.85rem;
 }
 
-.skills {
-  // padding: 1rem;
-  ul {
-    list-style: initial;
-    margin: 0.25rem 2rem;
-  }
-  li {
-    list-style: initial;
-    line-height: 1.6;
-  }
-}
-
-/*-----------------------------------*/
-// Projects
-
-.soon,
+.case-bg,
 .dmst-bg,
 .koga-bg {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 350px;
+  position: relative;
 
   .dmst-logo,
   .koga-white {
@@ -292,12 +281,31 @@ section {
   }
 }
 
-.soon {
-  white-space: normal;
+.case-bg {
   background: vars.$base-color;
+  color: vars.$color-default-bg;
+}
+
+.soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  white-space: normal;
+  background-color: vars.$two-color;
   color: vars.$color-default-bg;
   padding: 1rem;
   hyphens: manual;
+  // transform: translateY(calc(100% - 4.5rem));
+  opacity: 0;
+  transform-origin: center top;
+  transform: scaleY(0);
+  transition: transform 0.25s ease-in-out;
 
   p {
     transform: translateY(calc(100% - 4.5rem));
@@ -307,10 +315,13 @@ section {
   }
 }
 
-.soon:hover {
+.project-card:hover .soon {
   // background: vars.$base-color;
   // color: vars.$color-default-bg;
-
+  opacity: 1;
+  transform-origin: center bottom;
+  transform: scaleY(1);
+  transition-delay: calc(700ms / 8);
   p {
     transform: translateY(0);
     opacity: 1;
@@ -327,6 +338,15 @@ section {
   background: #d95e00;
 }
 
+// .project-card:hover .case-bg,
+// .project-card:focus-within .case-bg {
+//   background: red;
+//   // -webkit-transform: translateY(-50%);
+//   // transform: translateY(-50%);
+// }
+
+/*-----------------------------------*/
+// Preloader
 .preloader {
   height: 100vh;
   width: 100%;
@@ -339,4 +359,19 @@ section {
   pointer-events: none;
   opacity: 1;
   transition: 1.2s cubic-bezier(0.53, 0.04, 0.31, 0.88);
+}
+
+/*-----------------------------------*/
+// Skills
+
+.skills {
+  // padding: 1rem;
+  ul {
+    list-style: initial;
+    margin: 0.25rem 2rem;
+  }
+  li {
+    list-style: initial;
+    line-height: 1.6;
+  }
 }
