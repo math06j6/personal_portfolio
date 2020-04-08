@@ -2,27 +2,29 @@
 
 h1 {
   font-size: calc(2.5rem + 3vw);
-  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" -15, "ital" 1;
-  // font-variation-settings: "MONO" 0, "CASL" 0, "wght" 450, "slnt" 0, "ital" 0;
-  color: var(--baseColor);
-  color: vars.$base-color;
+  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" -15, "CRSV" 1;
+  // font-variation-settings: "MONO" 0, "CASL" 0, "wght" 450, "slnt" 0, "CRSV" 0;
+  color: currentColor;
 }
 
 h2 {
-  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" -15, "ital" 1;
+  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" -15, "CRSV" 1;
   font-size: 2rem;
+  color: currentColor;
 }
 
 h3 {
   font-size: 1.8rem;
   font-weight: normal;
+  color: currentColor;
 }
 
+li,
 a,
 p {
   font-family: "recursive-subset", "Recursive", sans-serif;
-  font-variation-settings: "MONO" 0, "CASL" 0, "wght" 400, "slnt" 0, "ital" 0;
-  color: var(--baseColor);
+  font-variation-settings: "MONO" 0, "CASL" 0, "wght" 400, "slnt" 0, "CRSV" 0;
+  color: currentColor;
 }
 
 p {

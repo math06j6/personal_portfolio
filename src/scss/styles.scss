@@ -10,12 +10,8 @@
   font-family: "Recursive";
   font-weight: 300 1000;
   font-style: oblique 0deg 15deg;
-  src: url("/static/fonts/Recursive_VF_1.043--subset-GF_latin_basic.woff2") format("woff2-variations");
+  src: url("/static/fonts/Recursive_VF_1.047.woff2") format("woff2-variations");
 }
-
-// :root {
-//   --scrollRatio: 0;
-// }
 
 * {
   box-sizing: border-box;
@@ -33,10 +29,14 @@ body {
   margin: 0;
 }
 
+body.dark {
+  background: vars.$night-bg-color;
+  color: vars.$night-color;
+}
+
 button {
   cursor: pointer;
-  font-family: 100% vars.$font-stack;
-  font-weight: 500;
+  font: 100% vars.$font-stack;
   font-size: 1rem;
   font-style: normal;
   padding: 0.75rem 1rem;
@@ -97,21 +97,28 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 10vh 1rem;
   height: 100vh;
   width: 100%;
   background: lightblue;
 
-  h1 {
+  .hero-content {
     margin-top: auto;
     margin-bottom: auto;
+  }
+
+  .dot {
+    color: #9059ff;
+  }
+
+  p {
+    padding: 1rem 0;
   }
 
   .arrow a {
     text-decoration: none;
     font-family: "recursive-subset", "Recursive", sans-serif;
-    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "ital" 1;
-    // font-variation-settings: "PROP" 0, "XPRN" 1, "wght" 700, "slnt" 0, "ital" 0;
+    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "CRSV" 1;
     padding-bottom: 5vh;
     font-size: calc(2rem + 1vw);
   }
@@ -121,6 +128,10 @@ section {
     transition-timing-function: cubic-bezier(0.08, 0.73, 0.83, 0.67);
     animation: color_change 10s ease forwards infinite;
   }
+}
+
+.dark #hero {
+  background: rgba(144, 144, 144, 0.1);
 }
 
 .reveal {
@@ -166,10 +177,6 @@ section {
 #projects {
   padding: 0rem;
 }
-
-// #projects h2 {
-
-// }
 
 .full {
   max-width: 100%;
@@ -223,7 +230,9 @@ section {
   width: 0;
 }
 
-// Project Cards
+/**
+ *  Project Cards
+ */
 
 .card-shadow {
   padding: 0.5rem;
@@ -262,6 +271,10 @@ section {
   font-size: 0.85rem;
 }
 
+.dark .project-name {
+  color: vars.$night-bg-color;
+}
+
 .case-bg,
 .dmst-bg,
 .koga-bg {
@@ -271,12 +284,17 @@ section {
   height: 350px;
   position: relative;
 
+  .traffic-logo,
   .dmst-logo,
   .koga-white {
     object-fit: cover;
     height: auto;
     width: 100%;
     max-width: 150px;
+  }
+
+  .dmst-logo,
+  .koga-white {
     fill: white;
   }
 }
@@ -305,7 +323,7 @@ section {
   opacity: 0;
   transform-origin: center top;
   transform: scaleY(0);
-  transition: transform 0.25s ease-in-out;
+  transition: transform 0.35s ease-in;
 
   p {
     transform: translateY(calc(100% - 4.5rem));
@@ -322,12 +340,22 @@ section {
   transform-origin: center bottom;
   transform: scaleY(1);
   transition-delay: calc(700ms / 8);
+  transition: transform 700ms cubic-bezier(0.19, 1, 0.22, 1), opacity 700ms cubic-bezier(0.19, 1, 0.22, 1);
+
   p {
     transform: translateY(0);
     opacity: 1;
     transform: translateY(0);
     transition-delay: calc(700ms / 8);
   }
+}
+
+.project-card:hover .soon::before {
+  width: 120%;
+  -webkit-transition: all 200ms cubic-bezier(0.25, 0.75, 0.5, 1.25);
+  transition: all 200ms cubic-bezier(0.25, 0.75, 0.5, 1.25);
+  width: 120%;
+  opacity: 0.8;
 }
 
 .koga-bg {
@@ -338,15 +366,14 @@ section {
   background: #d95e00;
 }
 
-// .project-card:hover .case-bg,
-// .project-card:focus-within .case-bg {
-//   background: red;
-//   // -webkit-transform: translateY(-50%);
-//   // transform: translateY(-50%);
-// }
+.traffic-bg {
+  background: #28292c;
+}
 
-/*-----------------------------------*/
-// Preloader
+/**
+ * Preloader
+ */
+
 .preloader {
   height: 100vh;
   width: 100%;
@@ -361,8 +388,9 @@ section {
   transition: 1.2s cubic-bezier(0.53, 0.04, 0.31, 0.88);
 }
 
-/*-----------------------------------*/
-// Skills
+/**
+ * Dark-Mode
+ */
 
 .skills {
   // padding: 1rem;
@@ -373,5 +401,60 @@ section {
   li {
     list-style: initial;
     line-height: 1.6;
+  }
+}
+
+#detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  position: fixed;
+  justify-content: center;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  color: currentColor;
+  background: vars.$color-default-bg;
+
+  .close-btn {
+    // font-size: 2rem;
+    // font-weight: 700;
+    color: currentColor;
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    min-width: initial;
+    top: 2rem;
+    right: 2rem;
+    font-family: "Recursive";
+    text-decoration: none;
+    font-family: "recursive-subset", "Recursive", sans-serif;
+    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "CRSV" 1;
+    padding-bottom: 5vh;
+    font-size: calc(2rem + 1vw);
+
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .info {
+    padding: 2.5%;
+  }
+
+  .info p {
+    column-count: 2;
+    column-gap: 2rem;
+    padding: 2.5%;
+  }
+  .info h2 {
+    padding: 2.5%;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  .info-img {
+    width: 10%;
+    margin: 2.5%;
+    min-width: 60px;
   }
 }

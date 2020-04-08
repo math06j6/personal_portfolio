@@ -87,14 +87,17 @@
       <div class="home-wrapper">
         <section id="one" class="is-visible">
           <header id="hero" class="content">
-            <h1 class="welcome">Welcome</h1>
+            <div class="hero-content">
+              <h1>Hi, my name <br />is Mathias<span class="dot">.</span></h1>
+              <p>I'm an creative developer from Copenhagen.</p>
+            </div>
             <span class="arrow">
-              <a class="" href="#about">↓</a>
+              <a href="#about" class="">↓</a>
             </span>
           </header>
         </section>
 
-        <section id="about reveal">
+        <section id="about" class="reveal">
           <header class="section-header fadein">
             <h2>About me</h2>
           </header>
@@ -133,7 +136,7 @@
                   </article>
                 </span> -->
                 <span class="card-shadow">
-                  <article class="project-card">
+                  <article id="koga" class="project-card accessible">
                     <!-- <div class="koga-bg fadein-two">
                       <svg xmlns="http://www.w3.org/2000/svg" class="koga-white" viewBox="0 0 150.78 30">
                         <defs></defs>
@@ -154,7 +157,7 @@
                       </span>
                     </div>
                     <div class="card-info">
-                      <p class="project-name">KOGA CPH</p>
+                      <p class="project-name">KOGA Center CPH</p>
                     </div>
                   </article>
                 </span>
@@ -187,8 +190,8 @@
                 </span>
                 <span class="card-shadow">
                   <article class="project-card">
-                    <div class="case-bg">
-                      <p class="">Portfolio</p>
+                    <div class="case-bg traffic-bg">
+                      <img src="static/content/trafik_logo.svg" alt="The Danish Road Safety Council" width="180" height="34" viewBox="0 0 180 34" class="traffic-logo" />
                       <span class="soon fadein-two">
                         <p class="">The case study is coming soon</p>
                       </span>
@@ -317,6 +320,22 @@
         </div>
       </div>
     </footer>
+    <div id="detail">
+      <button id="close" class="close-btn">←</button>
+      <div class="info">
+        <img class="info-img" src="" alt="">
+        <h2></h2>
+        <p></p>
+      </div>
+    </div> 
+    <template id="theme">
+      <button class="computer-btn">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <circle class="head" cx="50" cy="50" r="50" />
+        </svg>
+      </button>
+    </template>
     <script src="js/main.js"></script>
   </body>
 </html>

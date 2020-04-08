@@ -11,6 +11,11 @@ footer {
   height: 350px;
 }
 
+.dark footer {
+  background: vars.$night-color-three;
+  color: vars.$night-color-two;
+}
+
 .footer-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -85,7 +90,7 @@ footer span.navn {
 // }
 
 .contact {
-  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" -15, "ital" 1;
+  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" -15, "CRSV" 1;
   font-size: 1rem;
   line-height: 1.6;
   color: inherit;

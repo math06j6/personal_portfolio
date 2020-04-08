@@ -1,10 +1,12 @@
 "use strict";
 import "@babel/polyfill";
+import { getJson } from "/modules/getJsonData";
 
 window.addEventListener("DOMContentLoaded", init);
 
 const HTML = {};
 const date = new Date();
+let jsonData = [];
 
 function init() {
   console.log("init");
@@ -17,7 +19,44 @@ function init() {
   startObserver();
   darkMode();
   visAarstal();
+  getData();
+  hideDetail();
   document.querySelector(".menuknap").addEventListener("click", menuFunction);
+}
+
+async function getData() {
+  jsonData = await getJson("staticdata.json");
+  console.table(jsonData);
+  setDecadeEvents();
+}
+
+function hideDetail() {
+  console.log("hideDetail");
+  document.querySelector("#detail").style.display = "none";
+}
+
+function setDecadeEvents() {
+  document.querySelectorAll(".accessible").forEach((element) => {
+    console.log(element);
+
+    element.addEventListener("click", function () {
+      displayTheme(element.id);
+    });
+  });
+}
+
+function displayTheme(buttonId) {
+  document.querySelector("#detail").style.display = "flex";
+
+  // The theme will close after a click on the .close-btn
+  document.querySelector("#detail .close-btn").addEventListener("click", hideDetail);
+
+  // And/or after a click on the theme:
+  document.querySelector("#detail").addEventListener("click", hideDetail);
+
+  document.querySelector("#detail .info p").textContent = jsonData[0].info;
+  document.querySelector("#detail .info h2").textContent = jsonData[0].name;
+  document.querySelector("#detail .info-img").src = jsonData[0].url;
 }
 
 function preLoad() {

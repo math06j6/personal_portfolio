@@ -1,0 +1,93 @@
+[
+  {
+    "id": "koga",
+    "name": "koga"
+  },
+  {
+    "id": "dmst",
+    "filetype": "",
+    "url": "",
+    "name": "DMST"
+  },
+  {
+    "id": "portfolio",
+    "filetype": "",
+    "url": "./images/ibmthinkpad_new.png",
+    "name": "Portfolio"
+  },
+  {
+    "id": "traffic",
+    "filetype": "The Danish Road Safety Council",
+    "url": "",
+    "name": "The Danish Road Safety Council"
+  },
+  {
+    "id": "ussing",
+    "filetype": "",
+    "url": "",
+    "name": "Morten Ussing"
+  },
+  {
+    "childOf": "koga",
+    "filetype": "svgicon",
+    "url": "./elements/floppy_1color.svg",
+    "name": "Koga Center Copenhagen",
+    "info": "Introduktionen af hjemmecomputeren i 1977 og udbredelsen i 1980’erne giver mulighed for at gemme dokumenter på disketter såsom floppydisken. Dette betyder at papirer bliver overflødiggjort, og der skabes dermed starten på digitaliseringen. Igennem 1980’erne og 1990’erne forbedres printere til at kunne udskrive store mængder af gangen, og til at kunne håndtere store filer til print. I denne periode fordobles mængden af papirprint på verdens kontorer."
+  },
+
+  {
+    "childOf": "DMST",
+    "filetype": "svgicon",
+    "url": "./elements/www_1color.svg",
+    "name": "www",
+    "info": "Internettet blev udbredt i slutningen af 90’erne, så hjemmecomputerne havde nu muligheden for at være online. Computeren havde ikke haft et fyldestgørende formål, så for det meste blev den brugt til at spille spil af børnene i hjemmet. Nu hvor det var muligt at informationssøge og være på forum online, hvilket højnede computerens brugbarhed. I slutningen af 90’erne gik hjemmecomputeren fra at være noget elektroniknørderne havde, til at være allemandseje."
+  },
+  {
+    "childOf": "Portfolio",
+    "filetype": "svgicon",
+    "url": "./elements/gaming_1color.svg",
+    "name": "Portfolio"
+  },
+  {
+    "childOf": "The Danish Road Safety Council",
+    "filetype": "",
+    "url": "",
+    "name": "The Danish Road Safety Council"
+  },
+  {
+    "childOf": "Morten Ussing",
+    "filetype": "",
+    "url": "",
+    "name": "Morten Ussing"
+  },
+  {
+    "childOf": "00erpc",
+    "filetype": "svgicon",
+    "url": "./elements/floppy_1color.svg",
+    "name": "gaming"
+  },
+  {
+    "childOf": "10erpc",
+    "filetype": "svgicon",
+    "url": "./elements/gaming_1color.svg",
+    "name": "gaming"
+  },
+  {
+    "childOf": "10erpc",
+    "filetype": "svgicon",
+    "url": "./elements/floppy_1color.svg",
+    "name": "gaming"
+  },
+  {
+    "childOf": "20erpc",
+    "filetype": "svgicon",
+    "url": "./elements/gaming_1color.svg",
+    "name": "gaming"
+  },
+  {
+    "childOf": "20erpc",
+    "filetype": "svgicon",
+    "url": "./elements/www_1color.svg",
+    "name": "gaming"
+  }
+]

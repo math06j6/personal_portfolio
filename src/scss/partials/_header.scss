@@ -7,12 +7,17 @@
   width: 100%;
   background: transparent;
   background: #f6f5f5;
-  color: vars.$one-color;
+  color: currentColor;
   font-size: 1.6rem;
   transition: 0.5s all ease;
   z-index: 5;
   position: sticky;
   padding: 0;
+}
+
+.dark .site-header {
+  color: vars.$night-color-two;
+  background: vars.$night-bg-color;
 }
 
 .topnav {
@@ -29,7 +34,7 @@
   transition: 0.5s all ease;
   z-index: 5;
   background: transparent;
-  color: vars.$one-color;
+  color: currentColor;
 }
 
 .menu-top {
@@ -59,11 +64,6 @@
  * Dark-Mode
  */
 
-body.dark {
-  background: vars.$night-bg-color;
-  color: vars.$night-color;
-}
-
 .dark-mode {
   line-height: 1;
   /* text-transform: uppercase; */
@@ -83,7 +83,6 @@ body.dark {
 }
 
 .theme-icons {
-  --color-toggle-decor-bg: var($color-default-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,7 +116,7 @@ body.dark {
 }
 
 :checked + .theme-icons {
-  --color-toggle-decor-bg: vars.$night-bg-color;
+  // --color-toggle-decor-bg: vars.$night-bg-color;
 }
 
 :checked + .theme-icons .theme-icon[data-state="checked"] {
@@ -149,7 +148,7 @@ body.dark {
 .topnav .menuknap {
   cursor: pointer;
   background-color: transparent;
-  color: vars.$one-color;
+  color: currentColor;
   padding: 0.5rem 0;
   border: none;
 }
@@ -162,6 +161,11 @@ body.dark {
   /*    margin: 4px 0;*/
   transition: 0.4s;
   border-radius: 40%;
+}
+
+.dark .bar1,
+.dark .bar2 {
+  background-color: vars.$night-color-two;
 }
 
 .bar2 {
@@ -209,7 +213,7 @@ a.hjem {
   text-decoration: none;
   margin: auto 0;
   white-space: nowrap;
-  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" -15, "ital" 1;
+  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" -15, "CRSV" 1;
   // padding: 0.5rem 1rem;
   // margin: auto 0;
 }
@@ -235,7 +239,7 @@ a.hjem {
   height: 100%;
 }
 
-.theme-icon:hover,
+.dark-mode:hover,
 a.hjem:hover,
 .menu-wrapper li a:hover {
   color: vars.$two-color;
@@ -244,10 +248,10 @@ a.hjem:hover,
 }
 
 .menu-wrapper li a:hover {
-  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" 0, "ital" 0;
+  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" 0, "CRSV" 0;
 }
 a.hjem:hover {
-  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "ital" 1;
+  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "CRSV" 1;
 }
 
 .menu-list li:hover,
@@ -261,7 +265,7 @@ a.hjem:hover {
 .dropdown:hover,
 .dropdown .dropbtn:active,
 .dropdown .dropbtn:hover {
-  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" 0, "ital" 0;
+  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" 0, "CRSV" 0;
 }
 
 // .dropdown:hover {
@@ -336,6 +340,10 @@ a.hjem:hover {
 #navigation.change-header .bar2 {
   background-color: vars.$one-color;
 }
+.night #navigation.change-header .bar1,
+.night #navigation.change-header .bar2 {
+  background-color: vars.$night-color-two;
+}
 
 @media screen and (max-width: 800px) {
   /* NÃ¥r skÃ¦rmstÃ¸rrelsens bredde er mindre end 800px, skjules alle menu-links til fordel for min burgermenu. */
@@ -356,6 +364,11 @@ a.hjem:hover {
     width: 100%;
     height: 100%;
     display: block;
+  }
+
+  .dark #navigation.topnav.responsive {
+    background: vars.$night-bg-color;
+    color: vars.$night-color-two;
   }
 
   .topnav.responsive .menu-wrapper {
