@@ -8,7 +8,11 @@ footer {
   left: 0;
   bottom: 0;
   margin: 0;
-  height: 350px;
+  height: 260px;
+  scroll-snap-align: end;
+
+  // position: absolute;
+  // z-index: 0;
 }
 
 .dark footer {
@@ -22,7 +26,7 @@ footer {
   justify-content: space-between;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .footer-menu {
@@ -121,7 +125,7 @@ footer span.navn {
   width: 30px;
   height: 100%;
   max-height: 2rem;
-  /*   */
+  padding: 0.5rem 0 0;
 }
 
 .social-item:hover a svg,
@@ -135,11 +139,10 @@ footer span.navn {
 
 .copyright {
   width: 100%;
-  padding: 1rem 1rem 0;
+  padding: 2rem 1rem 0;
 }
 
 .copyright p {
-  //   color: white;
   padding: 0rem;
   font-size: 0.8rem;
 }

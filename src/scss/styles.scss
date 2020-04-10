@@ -42,26 +42,22 @@ button {
   padding: 0.75rem 1rem;
 }
 
-main {
-  display: grid;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
-  overflow-x: hidden;
-  // width: 100vw;
-}
-
-.home-wrapper {
+.snap-wrapper {
   /* height: calc(100vh - 18px); */
   min-height: 100vh;
   height: 100%;
-  /* overflow: scroll; */
-  /* scroll-behavior: smooth; */
+  // /* overflow: scroll; */
+  // /* scroll-behavior: smooth; */
   overflow-y: auto;
   overflow-y: scroll;
   scroll-snap-type: y proximity;
-  perspective: 2px;
+  // perspective: 2px;
+  // width: 100vw;s
+
   width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 .wrapper {
@@ -70,11 +66,12 @@ main {
   margin: 0 auto;
 }
 
+#hero,
 section {
   height: 100vh;
   scroll-snap-align: center;
   scroll-snap-stop: always;
-  // scroll-snap-align: start;
+  scroll-snap-align: start;
   // width: 100%;
   // position: sticky;
   // top: 0;
@@ -84,7 +81,7 @@ section {
   //   // height: 100vh;
   //   scroll-margin-bottom: 350px;
   // }
-
+  position: sticky;
   .section-header {
     margin: 0 auto;
     padding: 6rem 1rem 1rem;
@@ -391,6 +388,15 @@ section {
 /**
  * Dark-Mode
  */
+
+#skills {
+  background: peachpuff;
+  height: calc(100vh - 260px);
+
+  .wrapper {
+    height: calc(100vh - 260px);
+  }
+}
 
 .skills {
   // padding: 1rem;
