@@ -20,7 +20,7 @@ function init() {
   darkMode();
   visAarstal();
   getData();
-  hideDetail();
+  hideCase();
   document.querySelector(".menuknap").addEventListener("click", menuFunction);
 }
 
@@ -30,9 +30,9 @@ async function getData() {
   setDecadeEvents();
 }
 
-function hideDetail() {
-  console.log("hideDetail");
-  document.querySelector("#detail").style.display = "none";
+function hideCase() {
+  console.log("hideCase");
+  document.querySelector("#case").style.display = "none";
 }
 
 function setDecadeEvents() {
@@ -46,17 +46,24 @@ function setDecadeEvents() {
 }
 
 function displayTheme(buttonId) {
-  document.querySelector("#detail").style.display = "flex";
+  console.log(buttonId);
+  document.querySelector("#case").style.display = "block";
 
   // The theme will close after a click on the .close-btn
-  document.querySelector("#detail .close-btn").addEventListener("click", hideDetail);
+  document.querySelector("#case .close-btn").addEventListener("click", hideCase);
 
   // And/or after a click on the theme:
-  document.querySelector("#detail").addEventListener("click", hideDetail);
+  document.querySelector("#case").addEventListener("click", hideCase);
 
-  document.querySelector("#detail .info p").textContent = jsonData[0].info;
-  document.querySelector("#detail .info h2").textContent = jsonData[0].name;
-  document.querySelector("#detail .info-img").src = jsonData[0].url;
+  document.querySelector("#case .case-study h2").textContent = jsonData[0].name;
+  document.querySelector("#case .case-study p").textContent = jsonData[0].info;
+  document.querySelector("#case .year").textContent = jsonData[0].year;
+  // document.querySelector("#case .link").textContent = jsonData[0].link;
+  // let a = document.createElement('a');
+  // a.setAttribute('href', obj.link);
+  // document.querySelector("#case a.link").textContent = jsonData[0].link;
+  document.querySelector("#case a.link")[0].setAttribute("href", jsonData.link);
+  document.querySelector("#case .info-img").src = jsonData[0].url;
 }
 
 function preLoad() {

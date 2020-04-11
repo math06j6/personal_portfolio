@@ -243,7 +243,7 @@ a.hjem {
 a.hjem:hover,
 .menu-wrapper li a:hover {
   color: vars.$two-color;
-  transition-timing-function: cubic-bezier(0.08, 0.73, 0.83, 0.67);
+  transition: all 0.2s cubic-bezier(0.08, 0.73, 0.83, 0.67) 0s;
   animation: color_change 5s ease forwards infinite;
 }
 

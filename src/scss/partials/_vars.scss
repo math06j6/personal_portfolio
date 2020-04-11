@@ -4,7 +4,8 @@ $one-color: #32325d;
 $two-color: #9059ff;
 
 // $green-color: #004153;
-// $grey-color: #666666;
+$grey-color: #666666;
+// #999
 $white-color: #ffffff;
 
 $default-icon: currentColor;
@@ -19,6 +20,3 @@ $transition-two: 250ms;
 $icon-transition: opacity $transition-one ease, transform $transition-one cubic-bezier(1, 0, 0.55, 0.85);
 // Typography
 $font-stack: "recursive-subset", "Recursive", sans-serif;
-
-:root {
-}
