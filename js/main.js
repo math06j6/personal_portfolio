@@ -55,14 +55,21 @@ function displayTheme(buttonId) {
   // And/or after a click on the theme:
   document.querySelector("#case").addEventListener("click", hideCase);
 
+  // Info + Description of the selected project
+  document.querySelector("#case").setAttribute("data-client", jsonData[0].id);
   document.querySelector("#case .case-study h2").textContent = jsonData[0].name;
+  document.querySelector("[data-field=client]").textContent = jsonData[0].name;
+  document.querySelector("#case .client-name").textContent = jsonData[0].name;
   document.querySelector("#case .case-study p").textContent = jsonData[0].info;
   document.querySelector("#case .year").textContent = jsonData[0].year;
-  // document.querySelector("#case .link").textContent = jsonData[0].link;
-  // let a = document.createElement('a');
-  // a.setAttribute('href', obj.link);
-  // document.querySelector("#case a.link").textContent = jsonData[0].link;
-  document.querySelector("#case a.link")[0].setAttribute("href", jsonData.link);
+  document.querySelector(".case-study a.link").setAttribute("href", jsonData[0].link);
+
+  // Visual content from the selected project
+  let checkCase = document.querySelector("#case");
+  if (checkCase.hasAttribute("data-client", "koga")) {
+    console.log("koga");
+  }
+
   document.querySelector("#case .info-img").src = jsonData[0].url;
 }
 

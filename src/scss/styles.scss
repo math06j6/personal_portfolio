@@ -136,7 +136,7 @@ section {
 }
 
 .dark #hero {
-  background: rgba(144, 144, 144, 0.1);
+  background: vars.$night-color-three;
 }
 
 .reveal {
@@ -179,15 +179,11 @@ section {
 }
 
 /*------------ Projects ------------*/
-#projects {
-  padding: 0rem;
-}
 
 .full {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--colorSix);
 }
 
 .grid-container {
@@ -200,7 +196,6 @@ section {
 }
 
 .carousel-wrapper {
-  /* margin-left: 1rem; */
   margin: 0 auto;
 }
 
@@ -224,7 +219,7 @@ section {
 
   /*
   - Scrollbar-width:
-  - Removes Scrollbar. Only for Firefox
+  - Removes Scrollbar. Only in Firefox
   - Link: https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width
   */
 
@@ -253,7 +248,7 @@ section {
   position: relative;
   box-shadow: none;
   transition: transform 300ms ease-in-out, box-shadow 400ms ease, background 100ms ease;
-  width: 250px;
+  width: 260px;
 }
 
 .project-card:hover,
@@ -401,6 +396,10 @@ section {
   height: calc(100vh - 260px);
 }
 
+.dark #skills {
+  background: vars.$night-bg-color;
+}
+
 .skills {
   // padding: 1rem;
   ul {
@@ -414,7 +413,7 @@ section {
 }
 
 #case {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 99;
@@ -455,6 +454,10 @@ section {
       display: flex;
       flex-direction: column;
     }
+
+    .featured-media {
+      padding: 0 1rem;
+    }
   }
   .case-header {
     // margin: 0 auto;
@@ -488,9 +491,16 @@ section {
       font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 0;
     }
   }
+}
 
-  .info-img {
-    margin: 2.5%;
-    min-width: 100px;
-  }
+[data-client="koga"] .info-img {
+  padding: 100px;
+  background: #0e7dc7;
+  max-width: 700px;
+  place-items: center;
+  /* height: 100%; */
+}
+
+.dark #case {
+  background: vars.$night-bg-color;
 }

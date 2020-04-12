@@ -10,9 +10,6 @@ footer {
   margin: 0;
   height: 260px;
   scroll-snap-align: end;
-
-  // position: absolute;
-  // z-index: 0;
 }
 
 .dark footer {
@@ -64,12 +61,8 @@ address a {
 
 footer li,
 footer li a {
-  // color: var(--one-color);
   font-size: 1rem;
   line-height: 2;
-}
-footer li,
-footer li a {
   color: inherit;
   font-size: 1rem;
 }
@@ -84,14 +77,6 @@ footer span.navn {
   font-weight: 700;
   text-transform: uppercase;
 }
-
-// footer .footer-menu ul li:first-child,
-// footer .footer-menu ul li:first-child a{
-//   font-size: 1rem;
-//   line-height: 1.6;
-//   color: inherit;
-//   text-transform: uppercase;
-// }
 
 .contact {
   font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" -15, "CRSV" 1;
@@ -118,6 +103,9 @@ footer span.navn {
   transition: transform 0.2s ease-out 0s;
   transition: 200ms, transform 200ms;
   transform-box: fill-box;
+}
+.social-item:last-child {
+  margin-inline-end: 0;
 }
 
 .social-item a {
@@ -176,5 +164,3 @@ footer span.navn {
   visibility: visible;
   transform: scaleX(1);
 }
-
-/* Hover Animation slut*/
