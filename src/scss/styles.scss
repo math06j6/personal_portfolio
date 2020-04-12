@@ -10,7 +10,7 @@
   font-family: "Recursive";
   font-weight: 300 1000;
   font-style: oblique 0deg 15deg;
-  src: url("/static/fonts/Recursive_VF_1.047.woff2") format("woff2-variations");
+  src: url("/static/fonts/recursive_vf.woff2") format("woff2-variations");
 }
 
 * {
@@ -136,6 +136,10 @@ section {
 }
 
 .dark #hero {
+  background: vars.$night-bg-color;
+}
+
+.dark #about {
   background: vars.$night-color-three;
 }
 
@@ -495,4 +499,8 @@ section {
 
 .dark #case {
   background: vars.$night-bg-color;
+}
+
+.dark #case dt {
+  color: vars.$two-color;
 }
