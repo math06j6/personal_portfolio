@@ -12,9 +12,6 @@ function init() {
   console.log("init");
   HTML.container = document.querySelector(".home-wrapper");
 
-  // document.querySelector("#scrollbar").style.setProperty("--position", position);
-  // scrolling();
-  // getRatio();
   preLoad();
   startObserver();
   darkMode();
@@ -120,19 +117,6 @@ function darkMode() {
   });
 }
 
-// function getRatio() {
-//   HTML.container.addEventListener("scroll", scrolling);
-// }
-
-// function scrolling() {
-//   console.log("scrolling");
-
-//   const ratio = HTML.container.scrollTop / (HTML.container.scrollHeight - HTML.container.clientHeight);
-//   console.log(ratio);
-
-//   document.querySelector("#scrollinfo").style.setProperty("--scrollRatio", ratio);
-// }
-
 function startObserver() {
   // The Intersection Observer
   // Inspiration from MDN and the section "Beautiful Scrolling Experiences – Without Libraries"
@@ -177,7 +161,7 @@ function menuFunction() {
   // y.classList.toggle("responsive");
 }
 
-//Copyright - year
+//Copyright - this year
 function visAarstal() {
   console.log("visAarstal");
   document.querySelector("#aarstal").innerHTML = date.getFullYear() + " ";

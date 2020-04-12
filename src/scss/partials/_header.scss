@@ -276,14 +276,12 @@ a.hjem:hover {
 }
 
 @media screen and (max-width: 800px) {
-  /* NÃ¥r skÃ¦rmstÃ¸rrelsens bredde er mindre end 800px, skjules alle menu-links til fordel for min burgermenu. */
   .menu-wrapper a,
   .menu-wrapper li a,
   .dropdown .dropbtn {
     display: none;
   }
 
-  /* Der tilfÃ¸jes en class ("responsive") til topnav vha. JavaScript, nÃ¥r der klikkes pÃ¥ menuknappen. */
   #navigation.topnav.responsive {
     position: relative;
     background: vars.$color-default-bg;
@@ -323,13 +321,11 @@ a.hjem:hover {
     width: 100%;
   }
 
-  /* Ved klik pÃ¥ burger-menu vises menu-links*/
   .topnav.responsive .menu-wrapper a {
     display: inline-block;
     background: transparent;
   }
 
-  // .dropdown .dropbtn,
   .topnav.responsive .menu-wrapper a {
     font-size: calc(1rem + 1vw);
     text-align: left;
@@ -353,15 +349,9 @@ a.hjem:hover {
     background-color: vars.$one-color;
   }
 
-  // #navigation.change-header.responsive .responsive .dropbtn,
   #navigation.change-header.responsive .dropbtn {
-    // background-color: var(--colorOne);
     color: vars.$one-color;
   }
-
-  // .dropdown:hover .dropbtn {
-  //     background: inherit;
-  // }
 }
 
 @media only screen and (min-width: 800px) {
@@ -371,13 +361,11 @@ a.hjem:hover {
     align-items: center;
   }
 
-  /* Skjuler burger-menu */
   .topnav .menuknap {
     display: none;
   }
 
   .menu-top {
     flex-direction: row;
-    // padding: 0 1rem;
   }
 }
