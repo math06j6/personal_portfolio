@@ -16,7 +16,7 @@
 }
 
 .dark .site-header {
-  color: vars.$night-color-two;
+  color: vars.$night-color;
   background: vars.$night-bg-color;
 }
 
@@ -26,7 +26,7 @@
   justify-content: center;
   flex-wrap: nowrap;
   flex-direction: column;
-  overflow: hidden;
+  // overflow: hidden;
   // max-width: 1400px;
   padding: 0;
   margin: 0 auto;
@@ -52,7 +52,7 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
 }
 
 .left {
@@ -87,7 +87,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 100%;
@@ -113,10 +113,6 @@
   fill: vars.$default-icon;
   transition: vars.$icon-transition;
   // transition-delay: var(--transition-delay-icon);
-}
-
-:checked + .theme-icons {
-  // --color-toggle-decor-bg: vars.$night-bg-color;
 }
 
 :checked + .theme-icons .theme-icon[data-state="checked"] {
@@ -151,6 +147,7 @@
   color: currentColor;
   padding: 0.5rem 0;
   border: none;
+  outline: 0;
 }
 
 .bar1,
@@ -165,7 +162,7 @@
 
 .dark .bar1,
 .dark .bar2 {
-  background-color: vars.$night-color-two;
+  background-color: vars.$night-color;
 }
 
 .bar2 {
@@ -184,17 +181,12 @@
 
 /*** Burger-menu - Slut ***/
 
-.menu-wrapper {
-  width: 100%;
-  margin: auto;
-  padding: 0 1rem;
-}
-
 .menu-wrapper .menu-list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin: auto 0;
+  padding-right: 1.25rem;
 }
 
 .menu-wrapper li {
@@ -268,69 +260,7 @@ a.hjem:hover {
   font-variation-settings: "MONO" 0, "CASL" 1, "wght" 800, "slnt" 0, "CRSV" 0;
 }
 
-// .dropdown:hover {
-//     background-color: var(--colorTwo);
-//     color: vars.$white-color;
-
-// }
-
-// .dropdown {
-//     height: 100%;
-//     display: block;
-// }
-
-// /* Styling af dropdown knap + content */
-// .dropdown .dropbtn {
-//     border: none;
-//     outline: none;
-//     background-color: transparent;
-//     color: inherit;
-//     font-size: 1rem;
-//     line-height: 1.25;
-//     padding: 1rem;
-//     margin: 0;
-//     font-size: inherit;
-//     overflow-wrap: initial;
-//     hyphens: initial;
-//     display: block;
-// }
-
-// .dropdown-content {
-//     display: none;
-//     position: absolute;
-//     background-color: var(--colorSix);
-//     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-//     z-index: 1;
-//     flex-direction: column;
-// }
-
-// .dropdown-content li {
-//     color: var(--baseColor);
-
-// }
-
-// .dropdown-content li:hover {
-//     color: inherit;
-//     background-color: #9688b4;
-
-// }
-
-// .dropdown:hover .dropdown-content {
-//     display: block;
-// }
-
-// .dropdown-content a.menubtn.underline {
-//     padding: 1rem;
-//     text-decoration: none;
-//     display: inline-block;
-//     text-align: left;
-//     height: 100%;
-//     color: var(--baseColor);
-//     color: inherit;
-// }
-
 #navigation.change-header {
-  background: var(--colorSix);
   color: vars.$one-color;
 
   mix-blend-mode: initial;
@@ -342,7 +272,7 @@ a.hjem:hover {
 }
 .night #navigation.change-header .bar1,
 .night #navigation.change-header .bar2 {
-  background-color: vars.$night-color-two;
+  background-color: vars.$night-color;
 }
 
 @media screen and (max-width: 800px) {
@@ -368,7 +298,7 @@ a.hjem:hover {
 
   .dark #navigation.topnav.responsive {
     background: vars.$night-bg-color;
-    color: vars.$night-color-two;
+    color: vars.$night-color;
   }
 
   .topnav.responsive .menu-wrapper {

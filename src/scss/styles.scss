@@ -59,7 +59,7 @@ button {
 }
 
 .wrapper {
-  padding: 1rem;
+  padding: 1.25rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -82,7 +82,7 @@ section {
 
   .section-header {
     margin: 0 auto;
-    padding: 6rem 1rem 1rem;
+    padding: 6rem 1.25rem 1rem;
     max-width: 1400px;
   }
 }
@@ -92,10 +92,10 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 10vh 1rem;
+  padding: 10vh 1.25rem;
   height: 100vh;
   width: 100%;
-  background: lightblue;
+  background: vars.$night-color;
 
   .hero-content {
     margin-top: auto;
@@ -192,7 +192,7 @@ section {
   place-content: center;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 0.5rem 10vh;
+  padding: 0 0.625rem 10vh;
 }
 
 .carousel-wrapper {
@@ -208,9 +208,9 @@ section {
   scroll-behavior: auto;
   display: grid;
   grid-auto-flow: column;
-  // grid-gap: 1rem;
   white-space: nowrap;
-  padding: 5vh 0;
+  // padding: 5vh 0;
+  padding: 0.5rem 0;
   width: auto;
 
   /*  webkit-overflow-scrolling:for safari */
@@ -235,7 +235,7 @@ section {
  */
 
 .card-shadow {
-  padding: 0.5rem;
+  padding: 0.625rem;
 }
 
 .project-card {
@@ -248,7 +248,11 @@ section {
   position: relative;
   box-shadow: none;
   transition: transform 300ms ease-in-out, box-shadow 400ms ease, background 100ms ease;
-  width: 260px;
+  width: 255px;
+}
+
+.dark .project-card {
+  background-color: vars.$night-color;
 }
 
 .project-card:hover,
@@ -256,14 +260,6 @@ section {
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
   transform: translateY(-0.5rem);
   cursor: pointer;
-}
-
-.koga-logo,
-.carousel .billede_side {
-  object-fit: cover;
-  width: 100%;
-  max-width: 100%;
-  height: 350px;
 }
 
 .project-name {
@@ -287,9 +283,6 @@ section {
   .traffic-logo,
   .dmst-logo,
   .koga-white {
-    object-fit: cover;
-    height: auto;
-    width: 100%;
     max-width: 150px;
   }
 
@@ -393,7 +386,7 @@ section {
 
 #skills {
   background: peachpuff;
-  height: calc(100vh - 260px);
+  height: calc(100vh - 244px);
 }
 
 .dark #skills {
@@ -429,10 +422,10 @@ section {
     color: currentColor;
     background-color: transparent;
     border: none;
-    position: fixed;
+    position: absolute;
     min-width: initial;
     top: 2rem;
-    right: 2rem;
+    left: 2rem;
     font-family: "Recursive";
     text-decoration: none;
     font-family: "recursive-subset", "Recursive", sans-serif;
@@ -494,11 +487,10 @@ section {
 }
 
 [data-client="koga"] .info-img {
-  padding: 100px;
+  padding: calc(100px + 5vw) 100px;
   background: #0e7dc7;
   max-width: 700px;
   place-items: center;
-  /* height: 100%; */
 }
 
 .dark #case {

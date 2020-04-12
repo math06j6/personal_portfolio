@@ -8,7 +8,7 @@ footer {
   left: 0;
   bottom: 0;
   margin: 0;
-  height: 260px;
+  height: 244px;
   scroll-snap-align: end;
 }
 
@@ -23,39 +23,17 @@ footer {
   justify-content: space-between;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 1.75rem 0;
 }
 
-.footer-menu {
-  display: flex;
-}
-
-address .footer-menu {
-  flex-grow: 1;
-  flex-basis: 300px;
-}
-
-.footer-menu {
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 1rem;
-}
-
-address {
+.footer-col {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  font-style: normal;
-  padding: 0;
-  padding: 0px 0px 1px;
+  padding: 1.25rem;
 }
 
-address a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.footer-menu li {
+.footer-col li {
   cursor: pointer;
 }
 
@@ -92,8 +70,6 @@ footer span.navn {
   flex-wrap: wrap;
   flex-grow: 1;
   flex-basis: auto;
-  padding: 0 0 1rem;
-  margin: 0;
 }
 
 .social-item {
@@ -127,7 +103,7 @@ footer span.navn {
 
 .copyright {
   width: 100%;
-  padding: 2rem 1rem 0;
+  padding: 2rem 1.25rem 0;
 }
 
 .copyright p {
@@ -137,17 +113,13 @@ footer span.navn {
 
 /*Hover animation #Portfolio*/
 
-.footer-menu li > a.underline {
+.footer-col li > a.underline {
   position: relative;
   // color: vars.$one-color;
   text-decoration: none;
 }
 
-// .footer-menu li > a.underline:hover {
-//   color: var(vars.$one-color);
-// }
-
-.footer-menu li > a.underline:before {
+.footer-col li > a.underline:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -160,7 +132,7 @@ footer span.navn {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.footer-menu li > a.underline:hover:before {
+.footer-col li > a.underline:hover:before {
   visibility: visible;
   transform: scaleX(1);
 }
