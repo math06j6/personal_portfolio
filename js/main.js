@@ -15,7 +15,7 @@ function init() {
   preLoad();
   startObserver();
   darkMode();
-  visAarstal();
+  displayYear();
   getData();
   hideCase();
   document.querySelector(".menuknap").addEventListener("click", menuFunction);
@@ -57,7 +57,7 @@ function displayTheme(buttonId) {
   document.querySelector("#case .case-study h2").textContent = jsonData[0].name;
   document.querySelector("[data-field=client]").textContent = jsonData[0].name;
   document.querySelector("#case .client-name").textContent = jsonData[0].name;
-  document.querySelector("#case .case-study p").textContent = jsonData[0].info;
+  document.querySelector("#case .case-study .description").textContent = jsonData[0].info;
   document.querySelector("#case .year").textContent = jsonData[0].year;
   document.querySelector(".case-study a.link").setAttribute("href", jsonData[0].link);
 
@@ -162,7 +162,7 @@ function menuFunction() {
 }
 
 //Copyright - this year
-function visAarstal() {
-  console.log("visAarstal");
-  document.querySelector("#aarstal").innerHTML = date.getFullYear() + " ";
+function displayYear() {
+  console.log("displayYear");
+  document.querySelector("time").innerHTML = date.getFullYear() + " ";
 }

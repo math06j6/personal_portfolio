@@ -69,29 +69,5 @@
     "filetype": "svgicon",
     "url": "./elements/floppy_1color.svg",
     "name": "gaming"
-  },
-  {
-    "childOf": "10erpc",
-    "filetype": "svgicon",
-    "url": "./elements/gaming_1color.svg",
-    "name": "gaming"
-  },
-  {
-    "childOf": "10erpc",
-    "filetype": "svgicon",
-    "url": "./elements/floppy_1color.svg",
-    "name": "gaming"
-  },
-  {
-    "childOf": "20erpc",
-    "filetype": "svgicon",
-    "url": "./elements/gaming_1color.svg",
-    "name": "gaming"
-  },
-  {
-    "childOf": "20erpc",
-    "filetype": "svgicon",
-    "url": "./elements/www_1color.svg",
-    "name": "gaming"
   }
 ]

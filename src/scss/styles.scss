@@ -6,11 +6,33 @@
 @use 'partials/animation';
 @use 'partials/typography';
 
+// @font-face {
+//   font-family: "Recursive";
+//   font-display: swap;
+//   font-weight: 300 1000;
+//   font-style: oblique 0deg 15deg;
+//   src: url("/static/fonts/recursive_vf.woff2") format("woff2-variations");
+// }
+
 @font-face {
   font-family: "Recursive";
-  font-weight: 300 1000;
+  font-display: swap;
   font-style: oblique 0deg 15deg;
-  src: url("/static/fonts/recursive_vf.woff2") format("woff2-variations");
+  font-weight: 300 1000;
+  font-display: swap;
+  src: url("/static/fonts/Recursive_VF_1.047--subset_range_english_basic.woff2") format("woff2");
+  unicode-range: U+0020-007F, U+00A9, U+2190-2193, U+2018, U+2019, U+201C, U+201D, U+2022;
+}
+
+/* unicode latin-1, punc/symbols & arrows (↔ ↕ ↖ ↗ ↘ ↙) */
+@font-face {
+  font-family: "Recursive";
+  font-display: swap;
+  font-style: oblique 0deg 15deg;
+  font-weight: 300 1000;
+  font-display: swap;
+  src: url("/static/fonts/Recursive_VF_1.047--subset_range_latin_1_punc.woff2") format("woff2");
+  unicode-range: U+00A0-00BF, U+2194-2199;
 }
 
 * {
@@ -18,6 +40,9 @@
   margin: 0;
   padding: 0;
   // scroll-behavior: smooth;
+  // font-weight: normal;
+  font-family: "recursive-subset", "Recursive", sans-serif;
+  color: currentColor;
 }
 
 body {
@@ -27,6 +52,9 @@ body {
   overflow-wrap: break-word;
   hyphens: auto;
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100%;
 }
 
 body.dark {
@@ -56,6 +84,7 @@ button {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }
 
 .wrapper {
@@ -82,7 +111,7 @@ section {
 
   .section-header {
     margin: 0 auto;
-    padding: 6rem 1.25rem 1rem;
+    padding: 6rem 1.25rem 0.5rem;
     max-width: 1400px;
   }
 }
@@ -92,7 +121,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 10vh 1.25rem;
+  padding: 10vh 0;
   height: 100vh;
   width: 100%;
   background: vars.$night-color;
@@ -100,6 +129,10 @@ section {
   .hero-content {
     margin-top: auto;
     margin-bottom: auto;
+    padding: 1.25rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
   }
 
   .dot {
@@ -108,6 +141,33 @@ section {
 
   p {
     padding: 1rem 0;
+    margin: 0;
+    max-width: 550px;
+    overflow-wrap: initial;
+    hyphens: initial;
+  }
+
+  p > a.underline {
+    position: relative;
+    text-decoration: none;
+  }
+
+  p > a.underline:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: vars.$two-color;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  p > a.underline:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
   }
 
   .arrow a {
@@ -182,6 +242,10 @@ section {
   }
 }
 
+.portrait {
+  max-width: 350px;
+}
+
 /*------------ Projects ------------*/
 
 .full {
@@ -196,7 +260,7 @@ section {
   place-content: center;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 0.625rem 10vh;
+  padding: 0;
 }
 
 .carousel-wrapper {
@@ -242,6 +306,14 @@ section {
   padding: 0.625rem;
 }
 
+.card-shadow:first-child {
+  padding-left: 1.25rem;
+}
+
+.card-shadow:last-child {
+  padding-right: 1.25rem;
+}
+
 .project-card {
   text-align: center;
   background: white;
@@ -253,6 +325,15 @@ section {
   box-shadow: none;
   transition: transform 300ms ease-in-out, box-shadow 400ms ease, background 100ms ease;
   width: 255px;
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .arrow-right {
+    font-size: 3rem;
+    line-height: 1.3;
+  }
 }
 
 .dark .project-card {
@@ -301,7 +382,7 @@ section {
   color: vars.$color-default-bg;
 }
 
-.soon {
+.msg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,6 +402,7 @@ section {
   transform-origin: center top;
   transform: scaleY(0);
   transition: transform 0.35s ease-in;
+  color: red;
 
   p {
     transform: translateY(calc(100% - 4.5rem));
@@ -330,7 +412,7 @@ section {
   }
 }
 
-.project-card:hover .soon {
+.project-card:hover .msg {
   // background: vars.$base-color;
   // color: vars.$color-default-bg;
   opacity: 1;
@@ -347,7 +429,7 @@ section {
   }
 }
 
-.project-card:hover .soon::before {
+.project-card:hover .msg::before {
   width: 120%;
   -webkit-transition: all 200ms cubic-bezier(0.25, 0.75, 0.5, 1.25);
   transition: all 200ms cubic-bezier(0.25, 0.75, 0.5, 1.25);
@@ -357,6 +439,12 @@ section {
 
 .koga-bg {
   background: #0e7dc7;
+
+  .msg {
+    // align-items: flex-end;
+    // background-color: transparent;
+    background: vars.$base-color;
+  }
 }
 
 .dmst-bg {
@@ -400,12 +488,25 @@ section {
 .skills {
   // padding: 1rem;
   ul {
-    list-style: initial;
-    margin: 0.25rem 2rem;
+    // list-style: initial;
+    // margin: 0.25rem 2rem;
+    list-style: none;
+    margin: 0.25rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-gap: 0.5rem;
+    padding: 0 1rem;
+    max-width: 700px;
   }
-  li {
-    list-style: initial;
-    line-height: 1.6;
+
+  li:before {
+    content: "→";
+    color: vars.$two-color;
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1em;
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 0;
   }
 }
 
@@ -415,7 +516,7 @@ section {
   left: 0;
   z-index: 99;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   color: currentColor;
   background: vars.$color-default-bg;
   padding: 6rem 0 0;
@@ -486,6 +587,32 @@ section {
     dt {
       color: vars.$grey-color;
       font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 0;
+    }
+
+    a.link:hover {
+      color: #9059ff;
+      transition: all 0.2s cubic-bezier(0.08, 0.73, 0.83, 0.67) 0s;
+      animation: color_change 5s ease forwards infinite;
+      font-variation-settings: "MONO" 0, "CASL" 0, "wght" 700, "slnt" 0, "CRSV" 0;
+    }
+
+    a.link span.arrow-link {
+      display: inline-block;
+      transition: transform 0.25s;
+      text-decoration: none;
+      margin: 0 0.15rem;
+      padding: 0;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.08, 0.73, 0.83, 0.67) 0s;
+      font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 0;
+    }
+
+    a:hover span.arrow-link {
+      color: #9059ff;
+
+      animation: color_change 5s ease forwards infinite;
+      font-variation-settings: "MONO" 0, "CASL" 0, "wght" 700, "slnt" 0, "CRSV" 0;
+      transform: translate(0.2rem, -0.2rem);
     }
   }
 }
