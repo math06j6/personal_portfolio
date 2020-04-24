@@ -56,7 +56,6 @@
   align-items: center;
   // padding: 0.75rem 1.25rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -331,12 +330,11 @@ a.hjem:hover {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 53px);
     padding: 60px 0;
   }
 
   .topnav.responsive .menu-wrapper ul {
-    margin: 0 0 auto;
     flex-direction: column;
     width: 100%;
   }
@@ -351,7 +349,7 @@ a.hjem:hover {
   }
 
   .topnav.responsive .menu-wrapper a {
-    font-size: calc(1rem + 1vw);
+    font-size: calc(2rem + 1vw);
     text-align: left;
     line-height: 1.6;
   }

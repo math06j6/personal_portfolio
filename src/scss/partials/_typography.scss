@@ -28,6 +28,7 @@ h3 {
 h4 {
   font-size: 1rem;
   font-variation-settings: "MONO" 0, "CASL" 0, "wght" 700, "slnt" 0, "CRSV" 0;
+  text-decoration: underline;
 }
 
 li,
@@ -44,6 +45,6 @@ a {
 p {
   padding: 1rem;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.6;
 }

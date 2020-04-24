@@ -56,24 +56,36 @@
 
 @-webkit-keyframes heroArrow {
   0% {
-    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "CRSV" 0;
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0, "CRSV" 0;
   }
-  50% {
-    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 400, "slnt" 0, "CRSV" 0;
+
+  33% {
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 300, "slnt" 0, "CRSV" 0;
   }
+
+  66% {
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 650, "slnt" 0, "CRSV" 0;
+  }
+
   100% {
-    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "CRSV" 0;
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0, "CRSV" 0;
   }
 }
 
 @keyframes heroArrow {
   0% {
-    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "CRSV" 0;
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0, "CRSV" 0;
   }
-  50% {
-    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 400, "slnt" 0, "CRSV" 0;
+
+  33% {
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 300, "slnt" 0, "CRSV" 0;
   }
+
+  66% {
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 650, "slnt" 0, "CRSV" 0;
+  }
+
   100% {
-    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "CRSV" 0;
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0, "CRSV" 0;
   }
 }

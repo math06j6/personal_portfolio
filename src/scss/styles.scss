@@ -145,6 +145,7 @@ section {
     max-width: 550px;
     overflow-wrap: initial;
     hyphens: initial;
+    color: vars.$three-color;
   }
 
   p > a.underline {
@@ -173,7 +174,7 @@ section {
   .arrow a {
     text-decoration: none;
     font-family: "recursive-subset", "Recursive", sans-serif;
-    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "CRSV" 0;
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 500, "slnt" 0, "CRSV" 0;
     padding-bottom: 5vh;
     font-size: calc(2rem + 1vw);
     -webkit-animation: heroArrow infinite;
@@ -328,6 +329,7 @@ section {
 
   p {
     font-size: 0.85rem;
+    margin: 0 auto;
   }
 
   .arrow-right {
@@ -402,7 +404,6 @@ section {
   transform-origin: center top;
   transform: scaleY(0);
   transition: transform 0.35s ease-in;
-  color: red;
 
   p {
     transform: translateY(calc(100% - 4.5rem));
@@ -486,16 +487,12 @@ section {
 }
 
 .skills {
-  // padding: 1rem;
   ul {
-    // list-style: initial;
-    // margin: 0.25rem 2rem;
     list-style: none;
-    margin: 0.25rem;
+    margin: 0.5rem 0.25rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 0.5rem;
-    padding: 0 1rem;
     max-width: 700px;
   }
 
@@ -505,7 +502,6 @@ section {
     font-weight: bold;
     display: inline-block;
     width: 1rem;
-    margin-left: -1em;
     font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 0;
   }
 }
@@ -515,11 +511,17 @@ section {
   top: 0;
   left: 0;
   z-index: 99;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   color: currentColor;
   background: vars.$color-default-bg;
-  padding: 6rem 0 0;
+  padding: 0;
+
+  .back {
+    border-top: 0.5px solid vars.$three-color;
+    padding: 1rem 0;
+    margin: 2.5rem 0;
+  }
 
   .close-btn {
     // font-size: 2rem;
@@ -527,39 +529,42 @@ section {
     color: currentColor;
     background-color: transparent;
     border: none;
-    position: absolute;
+    // position: absolute;
     min-width: initial;
-    top: 2rem;
-    left: 2rem;
+    padding: 0;
     font-family: "Recursive";
     text-decoration: none;
     font-family: "recursive-subset", "Recursive", sans-serif;
-    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 700, "slnt" 0, "CRSV" 1;
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 400, "slnt" 0, "CRSV" 0;
     padding-bottom: 5vh;
-    font-size: calc(2rem + 1vw);
-
+    font-size: 1.25rem;
     cursor: pointer;
-    padding: 0;
   }
 
-  .case-study {
+  .case-wrapper {
     display: flex;
     flex-wrap: wrap;
 
     .col {
       flex: 1;
       flex-basis: 400px;
+    }
+
+    .desc {
       display: flex;
       flex-direction: column;
+      padding-right: 2.5vw;
     }
 
     .featured-media {
-      padding: 0 1rem;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-gap: 1.25rem;
     }
   }
   .case-header {
     // margin: 0 auto;
-    padding: 6rem 1rem 1rem;
+    padding: 6rem 0;
     max-width: 1400px;
   }
 
@@ -568,24 +573,24 @@ section {
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 700px;
-    margin-bottom: 2rem;
   }
 
   .info {
-    padding: 1rem 0;
     flex-grow: 1;
-    flex-basis: 300px;
+    flex-basis: 275px;
     list-style: none;
+    padding: 0 0 1rem;
 
     dt,
     dd {
-      padding: 0rem 1rem;
       font-size: 1rem;
       line-height: 1.6;
+      max-width: 240px;
+      hyphens: initial;
     }
 
     dt {
-      color: vars.$grey-color;
+      color: vars.$three-color;
       font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 0;
     }
 
@@ -615,12 +620,16 @@ section {
       transform: translate(0.2rem, -0.2rem);
     }
   }
+
+  p {
+    padding: 1.25rem 0 2.5rem;
+    max-width: 600px;
+  }
 }
 
 [data-client="koga"] .info-img {
   padding: calc(100px + 5vw) 100px;
   background: #0e7dc7;
-  max-width: 700px;
   place-items: center;
 }
 

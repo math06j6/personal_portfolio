@@ -3,71 +3,51 @@
     "id": "koga",
     "name": "Koga Center Copenhagen",
     "year": "2019",
+    "role": "UI/UX Designer & Frontend Developer",
     "link": "https://nimblyy.com/kea/09-cms/koga/",
+    "stack": "HTML, CSS, Javscript, Wordpress REST API, Adobe XD, Screaming Frog (SEO)",
+    "content1": "./content/koga_computer.jpg",
     "url": "./content/koga_white.svg",
-    "info": "Introduktionen af hjemmecomputeren i 1977 og udbredelsen i 1980’erne giver mulighed for at gemme dokumenter på disketter såsom floppydisken. Dette betyder at papirer bliver overflødiggjort, og der skabes dermed starten på digitaliseringen. Igennem 1980’erne og 1990’erne forbedres printere til at kunne udskrive store mængder af gangen, og til at kunne håndtere store filer til print. I denne periode fordobles mængden af papirprint på verdens kontorer."
+    "info": "Kogacenter Copenhagen is a bike-shop in Copenhagen, Denmark. I created a web experience in close collaboration with my group for a class project. In this project, we utilized the Wordpress REST API to fetch the data dynamically. Wordpress was only used as our backend. To solve this challenge, we put our focus on a straightforward user experience and a clean and distraction-free design."
   },
   {
     "id": "dmst",
-    "filetype": "",
+    "name": "DMST",
+    "year": "2020",
+    "role": "UI/UX Designer & Frontend Developer",
+    "link": "https://nimblyy.com/kea/09-cms/koga/",
+    "stack": "HTML, CSS, Javscript, JSON, GSAP, Node.js, Adobe XD",
     "url": "",
-    "name": "DMST"
+    "info": ""
   },
   {
     "id": "portfolio",
-    "filetype": "",
-    "url": "./images/ibmthinkpad_new.png",
-    "name": "Portfolio"
+    "name": "Portfolio",
+    "year": "2020",
+    "role": "UI/UX Designer & Frontend Developer",
+    "link": "index.html",
+    "stack": "HTML, CSS, Javscript, JSON, Node.js, Adobe XD",
+    "url": "",
+    "info": ""
   },
   {
     "id": "traffic",
-    "filetype": "The Danish Road Safety Council",
+    "name": "The Danish Road Safety Council",
+    "year": "2019",
+    "role": "UI/UX Designer & Frontend Developer",
+    "link": "",
+    "stack": "HTML, CSS, Javscript, Illustrator, Adobe XD, Adobe Premiere Pro,",
     "url": "",
-    "name": "The Danish Road Safety Council"
+    "info": ""
   },
   {
     "id": "ussing",
-    "filetype": "",
+    "name": "Morten Ussing",
+    "year": "2020",
+    "role": "UI/UX Designer & Frontend Developer",
+    "link": "",
+    "stack": "HTML, CSS, Javscript, Wordpress, Illustrator, Adobe XD, Adobe Premiere Pro,",
     "url": "",
-    "name": "Morten Ussing"
-  },
-  {
-    "childOf": "koga",
-    "filetype": "svg",
-    "url": "./content/koga_white.svg",
-    "name": "Koga Center Copenhagen",
-    "info": "Introduktionen af hjemmecomputeren i 1977 og udbredelsen i 1980’erne giver mulighed for at gemme dokumenter på disketter såsom floppydisken. Dette betyder at papirer bliver overflødiggjort, og der skabes dermed starten på digitaliseringen. Igennem 1980’erne og 1990’erne forbedres printere til at kunne udskrive store mængder af gangen, og til at kunne håndtere store filer til print. I denne periode fordobles mængden af papirprint på verdens kontorer."
-  },
-
-  {
-    "childOf": "DMST",
-    "filetype": "svgicon",
-    "url": "./elements/www_1color.svg",
-    "name": "www",
-    "info": "Internettet blev udbredt i slutningen af 90’erne, så hjemmecomputerne havde nu muligheden for at være online. Computeren havde ikke haft et fyldestgørende formål, så for det meste blev den brugt til at spille spil af børnene i hjemmet. Nu hvor det var muligt at informationssøge og være på forum online, hvilket højnede computerens brugbarhed. I slutningen af 90’erne gik hjemmecomputeren fra at være noget elektroniknørderne havde, til at være allemandseje."
-  },
-  {
-    "childOf": "Portfolio",
-    "filetype": "svgicon",
-    "url": "./elements/gaming_1color.svg",
-    "name": "Portfolio"
-  },
-  {
-    "childOf": "The Danish Road Safety Council",
-    "filetype": "",
-    "url": "",
-    "name": "The Danish Road Safety Council"
-  },
-  {
-    "childOf": "Morten Ussing",
-    "filetype": "",
-    "url": "",
-    "name": "Morten Ussing"
-  },
-  {
-    "childOf": "00erpc",
-    "filetype": "svgicon",
-    "url": "./elements/floppy_1color.svg",
-    "name": "gaming"
+    "info": ""
   }
 ]

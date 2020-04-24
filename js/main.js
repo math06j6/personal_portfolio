@@ -59,6 +59,8 @@ function displayTheme(buttonId) {
   document.querySelector("#case .client-name").textContent = jsonData[0].name;
   document.querySelector("#case .case-study .description").textContent = jsonData[0].info;
   document.querySelector("#case .year").textContent = jsonData[0].year;
+  document.querySelector("#case .role").textContent = jsonData[0].role;
+  document.querySelector("#case .tech").textContent = jsonData[0].stack;
   document.querySelector(".case-study a.link").setAttribute("href", jsonData[0].link);
 
   // Visual content from the selected project
@@ -68,6 +70,7 @@ function displayTheme(buttonId) {
   }
 
   document.querySelector("#case .info-img").src = jsonData[0].url;
+  document.querySelector("#case .info-img-one").src = jsonData[0].content1;
 }
 
 function preLoad() {
