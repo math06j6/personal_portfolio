@@ -1,6 +1,5 @@
 "use strict";
 import "@babel/polyfill";
-import { transform } from "@babel/core";
 import { getJson } from "/modules/getJsonData";
 
 window.addEventListener("DOMContentLoaded", init);
