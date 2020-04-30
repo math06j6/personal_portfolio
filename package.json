@@ -4,9 +4,9 @@
   "description": "personal portfolio",
   "main": "main.js",
   "scripts": {
-    "start": "parcel *.html --open",
+    "start": "parcel src/index.html --open",
     "clean": "rm -rf dist/*",
-    "build:parcel": "parcel build *.html --public-url ./",
+    "build:parcel": "parcel build src/index.html --public-url ./",
     "build": "npm run clean && npm run build:parcel"
   },
   "repository": {
@@ -19,11 +19,17 @@
     "url": "https://github.com/math06j6/personal_portfolio/issues"
   },
   "homepage": "https://github.com/math06j6/personal_portfolio#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7"
+  },
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.5",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
-    "prettier": "^2.0.5"
-  },
-  "dependencies": {}
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5",
+    "sass": "^1.26.5"
+  }
 }

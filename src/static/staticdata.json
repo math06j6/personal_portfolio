@@ -6,8 +6,10 @@
     "role": "UI/UX Designer & Frontend Developer",
     "link": "https://nimblyy.com/kea/09-cms/koga/",
     "stack": "HTML, CSS, Javscript, Wordpress REST API, Adobe XD, Screaming Frog (SEO)",
-    "content1": "./content/koga_computer.jpg",
-    "url": "./content/koga_white.svg",
+    "url": "./images/koga_computer.jpg",
+    "alt": "Koga",
+    "content2": "./content/koga_white.svg",
+    "alt2": "Koga",
     "info": "Kogacenter Copenhagen is a bike-shop in Copenhagen, Denmark. I created a web experience in close collaboration with my group for a class project. In this project, we utilized the Wordpress REST API to fetch the data dynamically. Wordpress was only used as our backend. To solve this challenge, we put our focus on a straightforward user experience and a clean and distraction-free design."
   },
   {
@@ -17,7 +19,6 @@
     "role": "UI/UX Designer & Frontend Developer",
     "link": "https://nimblyy.com/kea/09-cms/koga/",
     "stack": "HTML, CSS, Javscript, JSON, GSAP, Node.js, Adobe XD",
-    "content1": "",
     "url": "",
     "info": ""
   },
@@ -28,7 +29,6 @@
     "role": "UI/UX Designer & Frontend Developer",
     "link": "index.html",
     "stack": "HTML, CSS, Javscript, JSON, Node.js, Adobe XD",
-    "content1": "",
     "url": "",
     "info": ""
   },
@@ -39,7 +39,6 @@
     "role": "UI/UX Designer & Frontend Developer",
     "link": "",
     "stack": "HTML, CSS, Javscript, Illustrator, Adobe XD, Adobe Premiere Pro,",
-    "content1": "",
     "url": "",
     "info": ""
   },
@@ -49,7 +48,6 @@
     "year": "2020",
     "role": "UI/UX Designer & Frontend Developer",
     "link": "",
-    "content1": "",
     "stack": "HTML, CSS, Javscript, Wordpress, Illustrator, Adobe XD, Adobe Premiere Pro,",
     "url": "",
     "info": ""

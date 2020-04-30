@@ -1,12 +1,13 @@
 "use strict";
 import "@babel/polyfill";
-import { getJson } from "./modules/getJsonData";
+import staticdata from "/static/staticdata.json";
 
 window.addEventListener("DOMContentLoaded", init);
 
 const HTML = {};
 const date = new Date();
-let jsonData = [];
+
+let jsonData = staticdata;
 
 function init() {
   console.log("init");
@@ -21,9 +22,19 @@ function init() {
   document.querySelector(".menuknap").addEventListener("click", menuFunction);
 }
 
+// async function getData() {
+//   // jsonData = await getJson("staticdata.json");
+//   const jsonData = staticdata;
+//   console.table(jsonData);
+//   setDecadeEvents();
+// }
+
 async function getData() {
-  jsonData = await getJson("staticdata.json");
+  // jsonData = await getJson("staticdata.json");
+
+  // staticdata = jsonData;
   console.table(jsonData);
+
   setDecadeEvents();
 }
 
@@ -34,9 +45,8 @@ function hideCase() {
 
 function setDecadeEvents() {
   document.querySelectorAll(".accessible").forEach((element) => {
-    console.log(element);
-
     element.addEventListener("click", function () {
+      // console.log(element.id);
       displayTheme(element.id);
     });
   });
@@ -53,24 +63,25 @@ function displayTheme(buttonId) {
   document.querySelector("#case").addEventListener("click", hideCase);
 
   // Info + Description of the selected project
-  document.querySelector("#case").setAttribute("data-client", jsonData[0].id);
+  document.querySelector("#case").setAttribute("data-client", buttonId);
   document.querySelector("#case .case-study h2").textContent = jsonData[0].name;
   document.querySelector("[data-field=client]").textContent = jsonData[0].name;
   document.querySelector("#case .client-name").textContent = jsonData[0].name;
   document.querySelector("#case .case-study .description").textContent = jsonData[0].info;
   document.querySelector("#case .year").textContent = jsonData[0].year;
-  document.querySelector("#case .role").textContent = jsonData[0].role;
-  document.querySelector("#case .tech").textContent = jsonData[0].stack;
   document.querySelector(".case-study a.link").setAttribute("href", jsonData[0].link);
+  document.querySelector("#case .img-one").src = jsonData[0].url;
+  document.querySelector("#case .img-one").alt = jsonData[0].alt;
+  document.querySelector("#case .info-img").src = jsonData[0].content2;
+  document.querySelector("#case .info-img").alt = jsonData[0].alt2;
 
   // Visual content from the selected project
-  let checkCase = document.querySelector("#case");
-  if (checkCase.hasAttribute("data-client", "koga")) {
-    console.log("koga");
-  }
+  // let checkCase = document.querySelector("#case");
+  // if (checkCase.hasAttribute("data-client", "koga")) {
+  //   console.log("koga");
+  // }
 
-  document.querySelector("#case .info-img").src = jsonData[0].url;
-  document.querySelector("#case .info-img-one").src = jsonData[0].content1;
+  // buttonId = document.querySelector("#case .img-one").src = jsonData.url;
 }
 
 function preLoad() {
