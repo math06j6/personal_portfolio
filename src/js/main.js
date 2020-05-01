@@ -7,7 +7,6 @@ window.addEventListener("DOMContentLoaded", init);
 
 const HTML = {};
 const date = new Date();
-
 let jsonData = staticdata;
 
 function init() {
@@ -23,19 +22,8 @@ function init() {
   document.querySelector(".menuknap").addEventListener("click", menuFunction);
 }
 
-// async function getData() {
-//   // jsonData = await getJson("staticdata.json");
-//   const jsonData = staticdata;
-//   console.table(jsonData);
-//   setDecadeEvents();
-// }
-
 async function getData() {
-  // jsonData = await getJson("staticdata.json");
-
-  // staticdata = jsonData;
   console.table(jsonData);
-
   setDecadeEvents();
 }
 
@@ -73,7 +61,7 @@ function displayTheme(buttonId) {
   document.querySelector("#case .year").textContent = jsonData[0].year;
   document.querySelector(".case-study a.link").setAttribute("href", jsonData[0].link);
   document.querySelector("#case .img-one").alt = jsonData[0].alt;
-  document.querySelector("#case .info-img").alt = jsonData[0].alt_one;
+  document.querySelector("#case .img-two").alt = jsonData[0].alt_one;
 
   koga();
 }

@@ -6,14 +6,6 @@
 @use 'partials/animation';
 @use 'partials/typography';
 
-// @font-face {
-//   font-family: "Recursive";
-//   font-display: swap;
-//   font-weight: 300 1000;
-//   font-style: oblique 0deg 15deg;
-//   src: url("/static/fonts/recursive_vf.woff2") format("woff2-variations");
-// }
-
 @font-face {
   font-family: "Recursive";
   font-display: swap;
@@ -627,7 +619,7 @@ section {
   }
 }
 
-[data-client="koga"] .info-img {
+[data-client="koga"] .img-two {
   padding: calc(100px + 5vw) 100px;
   background: #0e7dc7;
   place-items: center;
