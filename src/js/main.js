@@ -1,6 +1,7 @@
 "use strict";
 import "@babel/polyfill";
-import staticdata from "/static/staticdata.json";
+import staticdata from "/staticdata.json";
+import koga from "./koga";
 
 window.addEventListener("DOMContentLoaded", init);
 
@@ -64,24 +65,17 @@ function displayTheme(buttonId) {
 
   // Info + Description of the selected project
   document.querySelector("#case").setAttribute("data-client", buttonId);
+
   document.querySelector("#case .case-study h2").textContent = jsonData[0].name;
   document.querySelector("[data-field=client]").textContent = jsonData[0].name;
   document.querySelector("#case .client-name").textContent = jsonData[0].name;
   document.querySelector("#case .case-study .description").textContent = jsonData[0].info;
   document.querySelector("#case .year").textContent = jsonData[0].year;
   document.querySelector(".case-study a.link").setAttribute("href", jsonData[0].link);
-  document.querySelector("#case .img-one").src = jsonData[0].url;
   document.querySelector("#case .img-one").alt = jsonData[0].alt;
-  document.querySelector("#case .info-img").src = jsonData[0].content2;
-  document.querySelector("#case .info-img").alt = jsonData[0].alt2;
+  document.querySelector("#case .info-img").alt = jsonData[0].alt_one;
 
-  // Visual content from the selected project
-  // let checkCase = document.querySelector("#case");
-  // if (checkCase.hasAttribute("data-client", "koga")) {
-  //   console.log("koga");
-  // }
-
-  // buttonId = document.querySelector("#case .img-one").src = jsonData.url;
+  koga();
 }
 
 function preLoad() {
